@@ -20,6 +20,6 @@
 "first test\stm32f1xx_hal_flash_ex.o"
 "first test\system_stm32f1xx.o"
 --library_type=microlib --strict --scatter "First test\First test.sct"
---summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
 --list "First test.map" -o "First test\First test.axf"

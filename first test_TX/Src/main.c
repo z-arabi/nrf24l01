@@ -669,18 +669,6 @@ void NRF24_initialize(void)
 	NRF24_powerDown();
 	printRadioSettings();
 }
-//void NRF24_write_payload(const void* buf, uint8_t len)
-//{
-//	uint8_t wrPayloadCmd;
-//	//Bring CSN low
-//	NRF24_csn(0);
-//	//Send Write Tx payload command followed by pbuf data
-//	wrPayloadCmd = CMD_W_TX_PAYLOAD;
-//	HAL_SPI_Transmit(&nrf24_hspi, &wrPayloadCmd, 1, 100);
-//	HAL_SPI_Transmit(&nrf24_hspi, (uint8_t *)buf, len, 100);
-//	//Bring CSN high
-//	NRF24_csn(1);
-//}
 void NRF24_DelayMicroSeconds(uint32_t uSec)
 {
 	uint32_t uSecVar = uSec;
@@ -729,14 +717,13 @@ void NRF24_startWrite( const void* buf, uint8_t len )
   NRF24_DelayMicroSeconds(20); //more than 10us
   NRF24_ce(0);
 }
-void NRF24_whatHappened(int *tx_ok)//,int *tx_fail)
+void NRF24_whatHappened(int *tx_ok)
 {
 	uint8_t status = NRF24_read_register(REG_STATUS);
 	*tx_ok = 0;
 	NRF24_write_register(REG_STATUS,leftshift(BIT_RX_DR) );
   // Report to the user what happened
   *tx_ok = status & leftshift(BIT_TX_DS);
-//  *tx_fail = status & leftshift(BIT_MAX_RT);
 }
 uint8_t NRF24_getDynamicPayloadSize(void)
 {
@@ -791,14 +778,9 @@ int NRF24_write( const void* buf, uint8_t len )
 //	printConfigReg();
 //	printStatusReg();
 	
-	int tx_ok;//tx_fail;
+	int tx_ok;
   NRF24_whatHappened(&tx_ok);
 	retStatus = tx_ok;
-//	if ( ack_payload_available )
-//  {
-//    ack_payload_length = NRF24_getDynamicPayloadSize();
-//	}
-	
 	//Power down
 	NRF24_available();
 	NRF24_write_register(CMD_FLUSH_TX, 0xFF);

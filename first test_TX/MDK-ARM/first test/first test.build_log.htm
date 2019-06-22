@@ -21,32 +21,52 @@ Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.1.0
 Dialog DLL:      TCM.DLL V1.35.1.0
  
 <h2>Project:</h2>
-E:\daneshgh\term6\Microprocessor\FP\first test\MDK-ARM\first test.uvprojx
-Project File Date:  06/20/2019
+E:\daneshgh\term6\Microprocessor\FP_1\master\first test_TX\MDK-ARM\first test.uvprojx
+Project File Date:  06/22/2019
 
 <h2>Output:</h2>
 *** Using Compiler 'V5.06 update 6 (build 750)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
 Build target 'first test'
+compiling stm32f1xx_it.c...
+compiling stm32f1xx_hal_msp.c...
 compiling main.c...
 ../Src/main.c(70): warning:  #177-D: variable "pipe0_reading_address"  was declared but never referenced
   static uint64_t pipe0_reading_address;
-../Src/main.c(72): warning:  #550-D: variable "ack_payload_length"  was set but never used
+../Src/main.c(71): warning:  #177-D: variable "ack_payload_available"  was declared but never referenced
+  static int ack_payload_available; /**< Whether there is an ack payload waiting */
+../Src/main.c(72): warning:  #177-D: variable "ack_payload_length"  was declared but never referenced
   static uint8_t ack_payload_length; /**< Dynamic size of pending ack payload. */
 ../Src/main.c(74): warning:  #550-D: variable "dynamic_payloads_enabled"  was set but never used
   static int dynamic_payloads_enabled; /**< Whether dynamic payloads are enabled. */ 
 ../Src/main.c(75): warning:  #177-D: variable "p_variant"  was declared but never referenced
   static int p_variant; /* False for RF24L01 and true for RF24L01P */
-../Src/main.c(76): warning:  #550-D: variable "wide_band"  was set but never used
+../Src/main.c(76): warning:  #177-D: variable "wide_band"  was declared but never referenced
   static int wide_band; /* 2Mbs data rate in use? */
-../Src/main.c(217): warning:  #177-D: variable "NRF24_ADDR_REGS"  was declared but never referenced
+../Src/main.c(215): warning:  #177-D: variable "NRF24_ADDR_REGS"  was declared but never referenced
   static const uint8_t NRF24_ADDR_REGS[7] = {
-../Src/main.c(227): warning:  #177-D: variable "RF24_RX_PW_PIPE"  was declared but never referenced
+../Src/main.c(225): warning:  #177-D: variable "RF24_RX_PW_PIPE"  was declared but never referenced
   static const uint8_t RF24_RX_PW_PIPE[6] = {
-../Src/main.c: 7 warnings, 0 errors
+../Src/main.c: 8 warnings, 0 errors
+compiling stm32f1xx_hal_gpio_ex.c...
+compiling stm32f1xx_hal_spi_ex.c...
+compiling stm32f1xx_hal_spi.c...
+compiling stm32f1xx_hal_tim.c...
+compiling stm32f1xx_hal_tim_ex.c...
+compiling stm32f1xx_hal_uart.c...
+compiling stm32f1xx_hal.c...
+compiling stm32f1xx_hal_rcc.c...
+compiling stm32f1xx_hal_rcc_ex.c...
+compiling stm32f1xx_hal_gpio.c...
+compiling stm32f1xx_hal_cortex.c...
+compiling stm32f1xx_hal_dma.c...
+compiling stm32f1xx_hal_pwr.c...
+compiling stm32f1xx_hal_flash_ex.c...
+compiling stm32f1xx_hal_flash.c...
+compiling system_stm32f1xx.c...
 linking...
-Program Size: Code=10368 RO-data=512 RW-data=80 ZI-data=1328  
+Program Size: Code=10132 RO-data=360 RW-data=72 ZI-data=1328  
 FromELF: creating hex file...
-"first test\first test.axf" - 0 Error(s), 7 Warning(s).
+"first test\first test.axf" - 0 Error(s), 8 Warning(s).
 
 <h2>Software Packages used:</h2>
 
@@ -69,7 +89,7 @@ Package Vendor: Keil
 <h2>Collection of Component Files used:</h2>
 
    * Component: ARM::CMSIS:CORE:5.1.1
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:14
 </pre>
 </body>
 </html>

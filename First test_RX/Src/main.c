@@ -242,6 +242,12 @@ static void MX_USART1_UART_Init(void);
 
 /* USER CODE BEGIN 0 */
 //Chip Select function
+void NRF24_DelayMicroSeconds(uint32_t uSec)
+{
+	uint32_t uSecVar = uSec;
+	uSecVar = uSecVar* ((SystemCoreClock/1000000)/3);
+	while(uSecVar--);
+}
 void NRF24_csn(int state)
 {
 	if(state) HAL_GPIO_WritePin(nrf24_PORT, nrf24_CSN_PIN, GPIO_PIN_SET);
@@ -300,12 +306,12 @@ void NRF24_write_register(uint8_t reg, uint8_t value)
 //Write multipl bytes register
 void NRF24_write_registerN(uint8_t reg, const uint8_t* buf, uint8_t len)
 {
-	uint8_t spiBuf[2];
+	uint8_t spiBuf;
 	//Put CSN low
 	NRF24_csn(0);
 	//Transmit register address and data
-	spiBuf[0] = reg|0x20;//write format
-	HAL_SPI_Transmit(&nrf24_hspi, spiBuf, 1, 100);
+	spiBuf = reg|0x20;//write format
+	HAL_SPI_Transmit(&nrf24_hspi, &spiBuf, 1, 100);
 	HAL_SPI_Transmit(&nrf24_hspi, (uint8_t*)buf, len, 100);
 	//Bring CSN high
 	NRF24_csn(1);
@@ -594,8 +600,8 @@ void NRF24_begin(GPIO_TypeDef *nrf24PORT, uint16_t nrfCSN_Pin, uint16_t nrfCE_Pi
 	//Put pins to idle state
 	NRF24_csn(1);
 	NRF24_ce(0);
-	//5 ms initial delay
-	HAL_Delay(5);
+	//1.5 ms initial delay(internal clock)
+	NRF24_DelayMicroSeconds(1500);
 	
 	//**** Soft Reset Registers default values ****//
 	NRF24_write_register(REG_CONFIG, 0x08);
@@ -608,7 +614,7 @@ void NRF24_begin(GPIO_TypeDef *nrf24PORT, uint16_t nrfCSN_Pin, uint16_t nrfCE_Pi
 	NRF24_write_register(REG_STATUS, 0x0e);
 	NRF24_write_register(REG_OBSERVE_TX, 0x00);
 	NRF24_write_register(REG_CD, 0x00);
-	uint8_t pipeAddrVar[6];
+	uint8_t pipeAddrVar[5];
 	pipeAddrVar[4]=0xE7; pipeAddrVar[3]=0xE7; pipeAddrVar[2]=0xE7; pipeAddrVar[1]=0xE7; pipeAddrVar[0]=0xE7; 
 	NRF24_write_registerN(REG_RX_ADDR_P0, pipeAddrVar, 5);
 	pipeAddrVar[4]=0xC2; pipeAddrVar[3]=0xC2; pipeAddrVar[2]=0xC2; pipeAddrVar[1]=0xC2; pipeAddrVar[0]=0xC2; 
@@ -672,14 +678,6 @@ void NRF24_write_payload(const void* buf, uint8_t len)
 	//Bring CSN high
 	NRF24_csn(1);
 }
-
-void NRF24_DelayMicroSeconds(uint32_t uSec)
-{
-	uint32_t uSecVar = uSec;
-	uSecVar = uSecVar* ((SystemCoreClock/1000000)/3);
-	while(uSecVar--);
-}
-
 void nrf24_DebugUART_Init(UART_HandleTypeDef nrf24Uart)
 {
 	memcpy(&nrf24_huart, &nrf24Uart, sizeof(nrf24Uart));
@@ -722,33 +720,24 @@ void NRF24_whatHappened(int *tx_ok,int *tx_fail,int *rx_ready)
   *tx_fail = status & leftshift(BIT_MAX_RT);
   *rx_ready = status & leftshift(BIT_RX_DR);
 }
-
-int NRF24_availablePipe(uint8_t* pipe_num)
+int NRF24_available()
 {
 	uint8_t status = NRF24_read_register(REG_STATUS);
 
-  int result = ( status & leftshift(BIT_RX_DR) );
+  int result = ( status & leftshift(BIT_RX_DR));
 
   if (result)
   {
-    // If the caller wants the pipe number, include that
-    if ( pipe_num )
-      *pipe_num = ( status >> BIT_RX_P_NO ) & 0x7;
+    //set RX_status bit
+    NRF24_write_register(REG_STATUS,(leftshift(BIT_RX_DR)) );
 
-    // Clear the status bit
-    NRF24_write_register(REG_STATUS,leftshift(BIT_RX_DR) );
-
-    // Handle ack payload receipt
+    //set RX_status bit and clear Tx_status bit
     if ( status & leftshift(BIT_TX_DS) )
     {
-      NRF24_write_register(REG_STATUS,leftshift(BIT_TX_DS));
+      NRF24_write_register( REG_STATUS,~(leftshift(BIT_TX_DS))| (leftshift(BIT_RX_DR)) );
     }
   }
   return result;
-}
-int NRF24_available(void)
-{
-	return NRF24_availablePipe(NULL);
 }
 int NRF24_write( const void* buf, uint8_t len )
 {
@@ -769,17 +758,9 @@ int NRF24_write( const void* buf, uint8_t len )
   }
   while( ! ( status & ( leftshift(BIT_TX_DS) | leftshift(BIT_MAX_RT) ) ) && ( HAL_GetTick() - sent_at < timeout ) );
 	
-//	printConfigReg();
-//	printStatusReg();
-	
 	int tx_ok, tx_fail;
   NRF24_whatHappened(&tx_ok,&tx_fail, &ack_payload_available);
 	retStatus = tx_ok;
-//	if ( ack_payload_available )
-//  {
-//    ack_payload_length = NRF24_getDynamicPayloadSize();
-//	}
-//	
 	//Power down
 	NRF24_available();
 	NRF24_write_register(CMD_FLUSH_TX, 0xFF);
@@ -829,9 +810,8 @@ void NRF24_openReadingPipe(uint8_t number, uint64_t address)
 		//Write payload size
 		NRF24_write_register(RF24_RX_PW_PIPE[number],payload_size);
 		//Enable pipe
-		NRF24_write_register(REG_EN_RXADDR, NRF24_read_register(REG_EN_RXADDR) | leftshift(number));
-	}
-	
+		NRF24_write_register(REG_EN_RXADDR, (NRF24_read_register(REG_EN_RXADDR)) | leftshift(number));
+	}	
 }
 
 /* USER CODE END 0 */
@@ -873,7 +853,7 @@ int main(void)
 	NRF24_begin(GPIOA, CSN_Pin, CE_Pin, hspi2);
 	NRF24_initialize();
 	
-	NRF24_openReadingPipe(0, RxpipeAddrs);	
+	NRF24_openReadingPipe(1, RxpipeAddrs);	
 	NRF24_startListening();
   /* USER CODE END 2 */
 

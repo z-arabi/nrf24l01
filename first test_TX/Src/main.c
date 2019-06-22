@@ -686,18 +686,30 @@ void NRF24_stopListening(void)
 	NRF24_write_register(CMD_FLUSH_TX, 0xFF);
 	NRF24_write_register(CMD_FLUSH_RX, 0xFF);
 }
-void NRF24_openWritingPipe(uint64_t address)
-{
-	NRF24_write_registerN(REG_RX_ADDR_P0, (uint8_t *)(&address), 5);
-  NRF24_write_registerN(REG_TX_ADDR, (uint8_t *)(&address), 5);
-	
+void NRF24_openWritingPipe(uint8_t number,uint64_t address)
+{	
 	const uint8_t max_payload_size = 32;
-  NRF24_write_register(REG_RX_PW_P0,MIN(payload_size,max_payload_size));
+	if(number <= 6)
+	{
+		if(number < 2)
+		{
+			//Address width is 5 bytes
+			NRF24_write_registerN(NRF24_ADDR_REGS[number], (uint8_t *)(&address), 5);
+		}
+		else
+		{
+			//Address width is 1 byte
+			NRF24_write_registerN(NRF24_ADDR_REGS[number], (uint8_t *)(&address), 1);
+		}
+		NRF24_write_registerN(REG_TX_ADDR, (uint8_t *)(&address), 5);
+		//Write payload size
+		NRF24_write_register(RF24_RX_PW_PIPE[number],MIN(payload_size,max_payload_size));
+	}
 }
 
 void NRF24_startWrite( const void* buf, uint8_t len )
 {
-	// Transmitter power-up
+	//mode Transmitter and power-up
   NRF24_write_register(REG_CONFIG, ( NRF24_read_register(REG_CONFIG) | leftshift(BIT_PWR_UP) ) & ~leftshift(BIT_PRIM_RX) );
   NRF24_DelayMicroSeconds(150); //more than 130us
 
@@ -729,38 +741,21 @@ uint8_t NRF24_getDynamicPayloadSize(void)
 {
 	return NRF24_read_register(CMD_R_RX_PL_WID);
 }
-int NRF24_availablePipe(uint8_t* pipe_num)
-{
-	uint8_t status = NRF24_read_register(REG_STATUS);
-
-  int result = ( status & leftshift(BIT_RX_DR) );
-
-  if (result)
-  {
-    // If the caller wants the pipe number, include that
-    if ( pipe_num )
-      *pipe_num = ( status >> BIT_RX_P_NO ) & 0x7;
-
-    // Clear the status bit
-    NRF24_write_register(REG_STATUS,leftshift(BIT_RX_DR) );
-
-    // Handle ack payload receipt
-    if ( status & leftshift(BIT_TX_DS) )
-    {
-      NRF24_write_register(REG_STATUS,leftshift(BIT_TX_DS));
-    }
-  }
-  return result;
-}
-int NRF24_available(void)
-{
-	return NRF24_availablePipe(NULL);
-}
 int NRF24_write( const void* buf, uint8_t len )
 {
-	int retStatus;
-	//Start writing
-	NRF24_write_register(REG_STATUS,0x70); // clear bit
+	//int retStatus;
+	int retstatus = (NRF24_read_register(REG_STATUS)) & leftshift(BIT_TX_DS) ;
+  if (retstatus)
+  {
+    //set Tx_status bit
+    NRF24_write_register(REG_STATUS,(leftshift(BIT_TX_DS)) );
+
+    //set RX_status bit and clear Tx_status bit
+    if ( retstatus & leftshift(BIT_RX_DR) )
+    {
+      NRF24_write_register( REG_STATUS,~(leftshift(BIT_RX_DR))| (leftshift(BIT_TX_DS)) );
+    }
+  }
 	NRF24_startWrite(buf,len);
 	//Data monitor
   uint8_t observe_tx;
@@ -769,7 +764,7 @@ int NRF24_write( const void* buf, uint8_t len )
 	const uint32_t timeout = 10; //ms to wait for timeout
 	do
   {
-    NRF24_read_registerN(REG_OBSERVE_TX,&observe_tx,1);
+    //NRF24_read_registerN(REG_OBSERVE_TX,observe_tx);
 		//Get status register
 		status = NRF24_read_register(REG_STATUS);
   }
@@ -780,11 +775,11 @@ int NRF24_write( const void* buf, uint8_t len )
 	
 	int tx_ok;
   NRF24_whatHappened(&tx_ok);
-	retStatus = tx_ok;
+	//retStatus = tx_ok;
 	//Power down
-	NRF24_available();
+	//NRF24_available();
 	NRF24_write_register(CMD_FLUSH_TX, 0xFF);
-	return retStatus;
+	return retstatus;
 }
 /* USER CODE END 0 */
 
@@ -828,7 +823,7 @@ int main(void)
 	
 	//**** TRANSMIT - ACK ****//
 	NRF24_stopListening();
-	NRF24_openWritingPipe(TxpipeAddrs);
+	NRF24_openWritingPipe(1,TxpipeAddrs);
   /* USER CODE END 2 */
 
   /* Infinite loop */

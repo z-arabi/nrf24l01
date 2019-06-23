@@ -1,4 +1,4 @@
-Component: ARM Compiler 5.06 update 6 (build 750) Tool: armlink [4d35ed]
+Component: ARM Compiler 5.06 update 4 (build 422) Tool: armlink [4d35d2]
 
 ==============================================================================
 
@@ -21,106 +21,6 @@ Section Cross References
     main.o(i.MX_GPIO_Init) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_Init) for HAL_GPIO_Init
     main.o(i.MX_SPI2_Init) refers to stm32f1xx_hal_spi_ex.o(i.HAL_SPI_Init) for HAL_SPI_Init
     main.o(i.MX_SPI2_Init) refers to main.o(.bss) for .bss
-    main.o(i.NRF24_ACTIVATE_cmd) refers to main.o(i.NRF24_csn) for NRF24_csn
-    main.o(i.NRF24_ACTIVATE_cmd) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) for HAL_SPI_Transmit
-    main.o(i.NRF24_ACTIVATE_cmd) refers to main.o(.bss) for .bss
-    main.o(i.NRF24_DelayMicroSeconds) refers to system_stm32f1xx.o(.data) for SystemCoreClock
-    main.o(i.NRF24_available) refers to main.o(i.NRF24_read_register) for NRF24_read_register
-    main.o(i.NRF24_available) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_begin) refers to memcpya.o(.text) for __aeabi_memcpy4
-    main.o(i.NRF24_begin) refers to main.o(i.NRF24_csn) for NRF24_csn
-    main.o(i.NRF24_begin) refers to main.o(i.NRF24_ce) for NRF24_ce
-    main.o(i.NRF24_begin) refers to main.o(i.NRF24_DelayMicroSeconds) for NRF24_DelayMicroSeconds
-    main.o(i.NRF24_begin) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_begin) refers to main.o(i.NRF24_write_registerN) for NRF24_write_registerN
-    main.o(i.NRF24_begin) refers to main.o(i.NRF24_ACTIVATE_cmd) for NRF24_ACTIVATE_cmd
-    main.o(i.NRF24_begin) refers to main.o(i.printRadioSettings) for printRadioSettings
-    main.o(i.NRF24_begin) refers to main.o(.bss) for .bss
-    main.o(i.NRF24_begin) refers to main.o(.data) for .data
-    main.o(i.NRF24_ce) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
-    main.o(i.NRF24_ce) refers to main.o(.data) for .data
-    main.o(i.NRF24_csn) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
-    main.o(i.NRF24_csn) refers to main.o(.data) for .data
-    main.o(i.NRF24_disableDynamicPayloads) refers to main.o(i.NRF24_read_register) for NRF24_read_register
-    main.o(i.NRF24_disableDynamicPayloads) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_disableDynamicPayloads) refers to main.o(.data) for .data
-    main.o(i.NRF24_getCRCLength) refers to main.o(i.NRF24_read_register) for NRF24_read_register
-    main.o(i.NRF24_getPALevel) refers to main.o(i.NRF24_read_register) for NRF24_read_register
-    main.o(i.NRF24_getPayloadSize) refers to main.o(.data) for .data
-    main.o(i.NRF24_initialize) refers to main.o(i.NRF24_setRetries) for NRF24_setRetries
-    main.o(i.NRF24_initialize) refers to main.o(i.NRF24_setAutoAck) for NRF24_setAutoAck
-    main.o(i.NRF24_initialize) refers to main.o(i.NRF24_setPALevel) for NRF24_setPALevel
-    main.o(i.NRF24_initialize) refers to main.o(i.NRF24_setDataRate) for NRF24_setDataRate
-    main.o(i.NRF24_initialize) refers to main.o(i.NRF24_setCRCLength) for NRF24_setCRCLength
-    main.o(i.NRF24_initialize) refers to main.o(i.NRF24_disableDynamicPayloads) for NRF24_disableDynamicPayloads
-    main.o(i.NRF24_initialize) refers to main.o(i.NRF24_setPayloadSize) for NRF24_setPayloadSize
-    main.o(i.NRF24_initialize) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_initialize) refers to main.o(i.NRF24_setChannel) for NRF24_setChannel
-    main.o(i.NRF24_initialize) refers to main.o(i.NRF24_powerDown) for NRF24_powerDown
-    main.o(i.NRF24_initialize) refers to main.o(i.printRadioSettings) for printRadioSettings
-    main.o(i.NRF24_openReadingPipe) refers to main.o(i.NRF24_write_registerN) for NRF24_write_registerN
-    main.o(i.NRF24_openReadingPipe) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_openReadingPipe) refers to main.o(i.NRF24_read_register) for NRF24_read_register
-    main.o(i.NRF24_openReadingPipe) refers to main.o(.constdata) for .constdata
-    main.o(i.NRF24_openReadingPipe) refers to main.o(.data) for .data
-    main.o(i.NRF24_openWritingPipe) refers to main.o(i.NRF24_write_registerN) for NRF24_write_registerN
-    main.o(i.NRF24_openWritingPipe) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_openWritingPipe) refers to main.o(.data) for .data
-    main.o(i.NRF24_powerDown) refers to main.o(i.NRF24_read_register) for NRF24_read_register
-    main.o(i.NRF24_powerDown) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_read) refers to main.o(i.NRF24_csn) for NRF24_csn
-    main.o(i.NRF24_read) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) for HAL_SPI_Transmit
-    main.o(i.NRF24_read) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Receive) for HAL_SPI_Receive
-    main.o(i.NRF24_read) refers to main.o(.data) for .data
-    main.o(i.NRF24_read) refers to main.o(.bss) for .bss
-    main.o(i.NRF24_read_register) refers to main.o(i.NRF24_csn) for NRF24_csn
-    main.o(i.NRF24_read_register) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) for HAL_SPI_Transmit
-    main.o(i.NRF24_read_register) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Receive) for HAL_SPI_Receive
-    main.o(i.NRF24_read_register) refers to main.o(.bss) for .bss
-    main.o(i.NRF24_read_registerN) refers to main.o(i.NRF24_csn) for NRF24_csn
-    main.o(i.NRF24_read_registerN) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) for HAL_SPI_Transmit
-    main.o(i.NRF24_read_registerN) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Receive) for HAL_SPI_Receive
-    main.o(i.NRF24_read_registerN) refers to main.o(.bss) for .bss
-    main.o(i.NRF24_setAutoAck) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_setCRCLength) refers to main.o(i.NRF24_read_register) for NRF24_read_register
-    main.o(i.NRF24_setCRCLength) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_setChannel) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_setDataRate) refers to main.o(i.NRF24_read_register) for NRF24_read_register
-    main.o(i.NRF24_setDataRate) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_setPALevel) refers to main.o(i.NRF24_read_register) for NRF24_read_register
-    main.o(i.NRF24_setPALevel) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_setPayloadSize) refers to main.o(.data) for .data
-    main.o(i.NRF24_setRetries) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_startListening) refers to main.o(i.NRF24_read_register) for NRF24_read_register
-    main.o(i.NRF24_startListening) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_startListening) refers to main.o(i.NRF24_ce) for NRF24_ce
-    main.o(i.NRF24_startListening) refers to main.o(i.NRF24_DelayMicroSeconds) for NRF24_DelayMicroSeconds
-    main.o(i.NRF24_startWrite) refers to main.o(i.NRF24_read_register) for NRF24_read_register
-    main.o(i.NRF24_startWrite) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_startWrite) refers to main.o(i.NRF24_DelayMicroSeconds) for NRF24_DelayMicroSeconds
-    main.o(i.NRF24_startWrite) refers to main.o(i.NRF24_write_payload) for NRF24_write_payload
-    main.o(i.NRF24_startWrite) refers to main.o(i.NRF24_ce) for NRF24_ce
-    main.o(i.NRF24_stopListening) refers to main.o(i.NRF24_ce) for NRF24_ce
-    main.o(i.NRF24_stopListening) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_whatHappened) refers to main.o(i.NRF24_read_register) for NRF24_read_register
-    main.o(i.NRF24_whatHappened) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_write) refers to main.o(i.NRF24_write_register) for NRF24_write_register
-    main.o(i.NRF24_write) refers to main.o(i.NRF24_startWrite) for NRF24_startWrite
-    main.o(i.NRF24_write) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
-    main.o(i.NRF24_write) refers to main.o(i.NRF24_read_registerN) for NRF24_read_registerN
-    main.o(i.NRF24_write) refers to main.o(i.NRF24_read_register) for NRF24_read_register
-    main.o(i.NRF24_write) refers to main.o(i.NRF24_whatHappened) for NRF24_whatHappened
-    main.o(i.NRF24_write) refers to main.o(i.NRF24_available) for NRF24_available
-    main.o(i.NRF24_write) refers to main.o(.data) for .data
-    main.o(i.NRF24_write_payload) refers to main.o(i.NRF24_csn) for NRF24_csn
-    main.o(i.NRF24_write_payload) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) for HAL_SPI_Transmit
-    main.o(i.NRF24_write_payload) refers to main.o(.bss) for .bss
-    main.o(i.NRF24_write_register) refers to main.o(i.NRF24_csn) for NRF24_csn
-    main.o(i.NRF24_write_register) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) for HAL_SPI_Transmit
-    main.o(i.NRF24_write_register) refers to main.o(.bss) for .bss
-    main.o(i.NRF24_write_registerN) refers to main.o(i.NRF24_csn) for NRF24_csn
-    main.o(i.NRF24_write_registerN) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) for HAL_SPI_Transmit
-    main.o(i.NRF24_write_registerN) refers to main.o(.bss) for .bss
     main.o(i.SystemClock_Config) refers to stm32f1xx_hal_rcc.o(i.HAL_RCC_OscConfig) for HAL_RCC_OscConfig
     main.o(i.SystemClock_Config) refers to stm32f1xx_hal_rcc.o(i.HAL_RCC_ClockConfig) for HAL_RCC_ClockConfig
     main.o(i.SystemClock_Config) refers to stm32f1xx_hal_rcc.o(i.HAL_RCC_GetHCLKFreq) for HAL_RCC_GetHCLKFreq
@@ -133,25 +33,16 @@ Section Cross References
     main.o(i.main) refers to main.o(i.MX_SPI2_Init) for MX_SPI2_Init
     main.o(i.main) refers to stm32f1xx_hal_uart.o(i.HAL_UART_Init) for HAL_UART_Init
     main.o(i.main) refers to memcpya.o(.text) for __aeabi_memcpy4
-    main.o(i.main) refers to main.o(i.nrf24_DebugUART_Init) for nrf24_DebugUART_Init
-    main.o(i.main) refers to main.o(i.NRF24_begin) for NRF24_begin
-    main.o(i.main) refers to main.o(i.NRF24_initialize) for NRF24_initialize
-    main.o(i.main) refers to main.o(i.NRF24_openReadingPipe) for NRF24_openReadingPipe
-    main.o(i.main) refers to main.o(i.NRF24_startListening) for NRF24_startListening
-    main.o(i.main) refers to main.o(i.NRF24_available) for NRF24_available
-    main.o(i.main) refers to main.o(i.NRF24_read) for NRF24_read
+    main.o(i.main) refers to nrf24.o(i.nrf24_DebugUART_Init) for nrf24_DebugUART_Init
+    main.o(i.main) refers to nrf24.o(i.NRF24_begin) for NRF24_begin
+    main.o(i.main) refers to nrf24.o(i.NRF24_initialize) for NRF24_initialize
+    main.o(i.main) refers to nrf24.o(i.NRF24_openReadingPipe) for NRF24_openReadingPipe
+    main.o(i.main) refers to nrf24.o(i.NRF24_startListening) for NRF24_startListening
+    main.o(i.main) refers to nrf24.o(i.NRF24_available) for NRF24_available
+    main.o(i.main) refers to nrf24.o(i.NRF24_read) for NRF24_read
     main.o(i.main) refers to stm32f1xx_hal_uart.o(i.HAL_UART_Transmit) for HAL_UART_Transmit
     main.o(i.main) refers to main.o(.bss) for .bss
     main.o(i.main) refers to main.o(.data) for .data
-    main.o(i.nrf24_DebugUART_Init) refers to memcpya.o(.text) for __aeabi_memcpy4
-    main.o(i.nrf24_DebugUART_Init) refers to main.o(.bss) for .bss
-    main.o(i.printRadioSettings) refers to printf8.o(i.__0sprintf$8) for __2sprintf
-    main.o(i.printRadioSettings) refers to strlen.o(.text) for strlen
-    main.o(i.printRadioSettings) refers to stm32f1xx_hal_uart.o(i.HAL_UART_Transmit) for HAL_UART_Transmit
-    main.o(i.printRadioSettings) refers to main.o(i.NRF24_read_register) for NRF24_read_register
-    main.o(i.printRadioSettings) refers to main.o(i.NRF24_read_registerN) for NRF24_read_registerN
-    main.o(i.printRadioSettings) refers to main.o(.bss) for .bss
-    main.o(i.printRadioSettings) refers to main.o(.conststring) for .conststring
     stm32f1xx_it.o(i.SysTick_Handler) refers to stm32f1xx_hal.o(i.HAL_IncTick) for HAL_IncTick
     stm32f1xx_it.o(i.SysTick_Handler) refers to stm32f1xx_hal_cortex.o(i.HAL_SYSTICK_IRQHandler) for HAL_SYSTICK_IRQHandler
     stm32f1xx_hal_msp.o(i.HAL_MspInit) refers to stm32f1xx_hal_cortex.o(i.HAL_NVIC_SetPriorityGrouping) for HAL_NVIC_SetPriorityGrouping
@@ -402,6 +293,109 @@ Section Cross References
     stm32f1xx_hal_flash_ex.o(i.HAL_FLASHEx_OBProgram) refers to stm32f1xx_hal_flash.o(.bss) for pFlash
     system_stm32f1xx.o(i.SystemCoreClockUpdate) refers to system_stm32f1xx.o(.data) for .data
     system_stm32f1xx.o(i.SystemCoreClockUpdate) refers to system_stm32f1xx.o(.constdata) for .constdata
+    nrf24.o(i.NRF24_ACTIVATE_cmd) refers to nrf24.o(i.NRF24_csn) for NRF24_csn
+    nrf24.o(i.NRF24_ACTIVATE_cmd) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) for HAL_SPI_Transmit
+    nrf24.o(i.NRF24_ACTIVATE_cmd) refers to nrf24.o(.bss) for .bss
+    nrf24.o(i.NRF24_DelayMicroSeconds) refers to system_stm32f1xx.o(.data) for SystemCoreClock
+    nrf24.o(i.NRF24_available) refers to nrf24.o(i.NRF24_read_register) for NRF24_read_register
+    nrf24.o(i.NRF24_available) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_begin) refers to memcpya.o(.text) for __aeabi_memcpy4
+    nrf24.o(i.NRF24_begin) refers to nrf24.o(i.NRF24_csn) for NRF24_csn
+    nrf24.o(i.NRF24_begin) refers to nrf24.o(i.NRF24_ce) for NRF24_ce
+    nrf24.o(i.NRF24_begin) refers to nrf24.o(i.NRF24_DelayMicroSeconds) for NRF24_DelayMicroSeconds
+    nrf24.o(i.NRF24_begin) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_begin) refers to nrf24.o(i.NRF24_write_registerN) for NRF24_write_registerN
+    nrf24.o(i.NRF24_begin) refers to nrf24.o(i.NRF24_ACTIVATE_cmd) for NRF24_ACTIVATE_cmd
+    nrf24.o(i.NRF24_begin) refers to nrf24.o(i.printRadioSettings) for printRadioSettings
+    nrf24.o(i.NRF24_begin) refers to nrf24.o(.bss) for .bss
+    nrf24.o(i.NRF24_begin) refers to nrf24.o(.data) for .data
+    nrf24.o(i.NRF24_ce) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
+    nrf24.o(i.NRF24_ce) refers to nrf24.o(.data) for .data
+    nrf24.o(i.NRF24_csn) refers to stm32f1xx_hal_gpio.o(i.HAL_GPIO_WritePin) for HAL_GPIO_WritePin
+    nrf24.o(i.NRF24_csn) refers to nrf24.o(.data) for .data
+    nrf24.o(i.NRF24_disableDynamicPayloads) refers to nrf24.o(i.NRF24_read_register) for NRF24_read_register
+    nrf24.o(i.NRF24_disableDynamicPayloads) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_disableDynamicPayloads) refers to nrf24.o(.data) for .data
+    nrf24.o(i.NRF24_initialize) refers to nrf24.o(i.NRF24_setRetries) for NRF24_setRetries
+    nrf24.o(i.NRF24_initialize) refers to nrf24.o(i.NRF24_setAutoAck) for NRF24_setAutoAck
+    nrf24.o(i.NRF24_initialize) refers to nrf24.o(i.NRF24_setPALevel) for NRF24_setPALevel
+    nrf24.o(i.NRF24_initialize) refers to nrf24.o(i.NRF24_setDataRate) for NRF24_setDataRate
+    nrf24.o(i.NRF24_initialize) refers to nrf24.o(i.NRF24_setCRCLength) for NRF24_setCRCLength
+    nrf24.o(i.NRF24_initialize) refers to nrf24.o(i.NRF24_disableDynamicPayloads) for NRF24_disableDynamicPayloads
+    nrf24.o(i.NRF24_initialize) refers to nrf24.o(i.NRF24_setPayloadSize) for NRF24_setPayloadSize
+    nrf24.o(i.NRF24_initialize) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_initialize) refers to nrf24.o(i.NRF24_setChannel) for NRF24_setChannel
+    nrf24.o(i.NRF24_initialize) refers to nrf24.o(i.NRF24_powerDown) for NRF24_powerDown
+    nrf24.o(i.NRF24_initialize) refers to nrf24.o(i.printRadioSettings) for printRadioSettings
+    nrf24.o(i.NRF24_openReadingPipe) refers to nrf24.o(i.NRF24_write_registerN) for NRF24_write_registerN
+    nrf24.o(i.NRF24_openReadingPipe) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_openReadingPipe) refers to nrf24.o(i.NRF24_read_register) for NRF24_read_register
+    nrf24.o(i.NRF24_openReadingPipe) refers to nrf24.o(.constdata) for .constdata
+    nrf24.o(i.NRF24_openReadingPipe) refers to nrf24.o(.data) for .data
+    nrf24.o(i.NRF24_openWritingPipe) refers to nrf24.o(i.NRF24_write_registerN) for NRF24_write_registerN
+    nrf24.o(i.NRF24_openWritingPipe) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_openWritingPipe) refers to nrf24.o(.constdata) for .constdata
+    nrf24.o(i.NRF24_openWritingPipe) refers to nrf24.o(.data) for .data
+    nrf24.o(i.NRF24_powerDown) refers to nrf24.o(i.NRF24_read_register) for NRF24_read_register
+    nrf24.o(i.NRF24_powerDown) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_read) refers to nrf24.o(i.NRF24_csn) for NRF24_csn
+    nrf24.o(i.NRF24_read) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) for HAL_SPI_Transmit
+    nrf24.o(i.NRF24_read) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Receive) for HAL_SPI_Receive
+    nrf24.o(i.NRF24_read) refers to nrf24.o(.data) for .data
+    nrf24.o(i.NRF24_read) refers to nrf24.o(.bss) for .bss
+    nrf24.o(i.NRF24_read_register) refers to nrf24.o(i.NRF24_csn) for NRF24_csn
+    nrf24.o(i.NRF24_read_register) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) for HAL_SPI_Transmit
+    nrf24.o(i.NRF24_read_register) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Receive) for HAL_SPI_Receive
+    nrf24.o(i.NRF24_read_register) refers to nrf24.o(.bss) for .bss
+    nrf24.o(i.NRF24_read_registerN) refers to nrf24.o(i.NRF24_csn) for NRF24_csn
+    nrf24.o(i.NRF24_read_registerN) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) for HAL_SPI_Transmit
+    nrf24.o(i.NRF24_read_registerN) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Receive) for HAL_SPI_Receive
+    nrf24.o(i.NRF24_read_registerN) refers to nrf24.o(.bss) for .bss
+    nrf24.o(i.NRF24_setAutoAck) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_setCRCLength) refers to nrf24.o(i.NRF24_read_register) for NRF24_read_register
+    nrf24.o(i.NRF24_setCRCLength) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_setChannel) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_setDataRate) refers to nrf24.o(i.NRF24_read_register) for NRF24_read_register
+    nrf24.o(i.NRF24_setDataRate) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_setPALevel) refers to nrf24.o(i.NRF24_read_register) for NRF24_read_register
+    nrf24.o(i.NRF24_setPALevel) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_setPayloadSize) refers to nrf24.o(.data) for .data
+    nrf24.o(i.NRF24_setRetries) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_startListening) refers to nrf24.o(i.NRF24_read_register) for NRF24_read_register
+    nrf24.o(i.NRF24_startListening) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_startListening) refers to nrf24.o(i.NRF24_ce) for NRF24_ce
+    nrf24.o(i.NRF24_startListening) refers to nrf24.o(i.NRF24_DelayMicroSeconds) for NRF24_DelayMicroSeconds
+    nrf24.o(i.NRF24_startWrite) refers to nrf24.o(i.NRF24_read_register) for NRF24_read_register
+    nrf24.o(i.NRF24_startWrite) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_startWrite) refers to nrf24.o(i.NRF24_DelayMicroSeconds) for NRF24_DelayMicroSeconds
+    nrf24.o(i.NRF24_startWrite) refers to nrf24.o(i.NRF24_csn) for NRF24_csn
+    nrf24.o(i.NRF24_startWrite) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) for HAL_SPI_Transmit
+    nrf24.o(i.NRF24_startWrite) refers to nrf24.o(i.NRF24_ce) for NRF24_ce
+    nrf24.o(i.NRF24_startWrite) refers to nrf24.o(.bss) for .bss
+    nrf24.o(i.NRF24_stopListening) refers to nrf24.o(i.NRF24_ce) for NRF24_ce
+    nrf24.o(i.NRF24_stopListening) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_write) refers to nrf24.o(i.NRF24_read_register) for NRF24_read_register
+    nrf24.o(i.NRF24_write) refers to nrf24.o(i.NRF24_write_register) for NRF24_write_register
+    nrf24.o(i.NRF24_write) refers to nrf24.o(i.NRF24_startWrite) for NRF24_startWrite
+    nrf24.o(i.NRF24_write) refers to stm32f1xx_hal.o(i.HAL_GetTick) for HAL_GetTick
+    nrf24.o(i.NRF24_write_payload) refers to nrf24.o(i.NRF24_csn) for NRF24_csn
+    nrf24.o(i.NRF24_write_payload) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) for HAL_SPI_Transmit
+    nrf24.o(i.NRF24_write_payload) refers to nrf24.o(.bss) for .bss
+    nrf24.o(i.NRF24_write_register) refers to nrf24.o(i.NRF24_csn) for NRF24_csn
+    nrf24.o(i.NRF24_write_register) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) for HAL_SPI_Transmit
+    nrf24.o(i.NRF24_write_register) refers to nrf24.o(.bss) for .bss
+    nrf24.o(i.NRF24_write_registerN) refers to nrf24.o(i.NRF24_csn) for NRF24_csn
+    nrf24.o(i.NRF24_write_registerN) refers to stm32f1xx_hal_spi.o(i.HAL_SPI_Transmit) for HAL_SPI_Transmit
+    nrf24.o(i.NRF24_write_registerN) refers to nrf24.o(.bss) for .bss
+    nrf24.o(i.nrf24_DebugUART_Init) refers to memcpya.o(.text) for __aeabi_memcpy4
+    nrf24.o(i.nrf24_DebugUART_Init) refers to nrf24.o(.bss) for .bss
+    nrf24.o(i.printRadioSettings) refers to printf8.o(i.__0sprintf$8) for __2sprintf
+    nrf24.o(i.printRadioSettings) refers to strlen.o(.text) for strlen
+    nrf24.o(i.printRadioSettings) refers to stm32f1xx_hal_uart.o(i.HAL_UART_Transmit) for HAL_UART_Transmit
+    nrf24.o(i.printRadioSettings) refers to nrf24.o(i.NRF24_read_register) for NRF24_read_register
+    nrf24.o(i.printRadioSettings) refers to nrf24.o(i.NRF24_read_registerN) for NRF24_read_registerN
+    nrf24.o(i.printRadioSettings) refers to nrf24.o(.bss) for .bss
+    nrf24.o(i.printRadioSettings) refers to nrf24.o(.conststring) for .conststring
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry10a.o(.ARM.Collect$$$$0000000D) for __rt_final_cpp
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry11a.o(.ARM.Collect$$$$0000000F) for __rt_final_exit
     entry.o(.ARM.Collect$$$$00000000) refers (Special) to entry7b.o(.ARM.Collect$$$$00000008) for _main_clock
@@ -676,15 +670,6 @@ Removing Unused input sections from the image.
     Removing main.o(.rev16_text), (4 bytes).
     Removing main.o(.revsh_text), (4 bytes).
     Removing main.o(.rrx_text), (6 bytes).
-    Removing main.o(i.NRF24_getCRCLength), (32 bytes).
-    Removing main.o(i.NRF24_getPALevel), (40 bytes).
-    Removing main.o(i.NRF24_getPayloadSize), (12 bytes).
-    Removing main.o(i.NRF24_openWritingPipe), (44 bytes).
-    Removing main.o(i.NRF24_startWrite), (62 bytes).
-    Removing main.o(i.NRF24_stopListening), (28 bytes).
-    Removing main.o(i.NRF24_whatHappened), (52 bytes).
-    Removing main.o(i.NRF24_write), (92 bytes).
-    Removing main.o(i.NRF24_write_payload), (56 bytes).
     Removing main.o(i._Error_Handler), (2 bytes).
     Removing stm32f1xx_it.o(.rev16_text), (4 bytes).
     Removing stm32f1xx_it.o(.revsh_text), (4 bytes).
@@ -949,6 +934,14 @@ Removing Unused input sections from the image.
     Removing system_stm32f1xx.o(.revsh_text), (4 bytes).
     Removing system_stm32f1xx.o(.rrx_text), (6 bytes).
     Removing system_stm32f1xx.o(i.SystemCoreClockUpdate), (104 bytes).
+    Removing nrf24.o(.rev16_text), (4 bytes).
+    Removing nrf24.o(.revsh_text), (4 bytes).
+    Removing nrf24.o(.rrx_text), (6 bytes).
+    Removing nrf24.o(i.NRF24_openWritingPipe), (68 bytes).
+    Removing nrf24.o(i.NRF24_startWrite), (100 bytes).
+    Removing nrf24.o(i.NRF24_stopListening), (28 bytes).
+    Removing nrf24.o(i.NRF24_write), (92 bytes).
+    Removing nrf24.o(i.NRF24_write_payload), (56 bytes).
     Removing dadd.o(.text), (334 bytes).
     Removing dmul.o(.text), (228 bytes).
     Removing ddiv.o(.text), (222 bytes).
@@ -956,7 +949,7 @@ Removing Unused input sections from the image.
     Removing cdrcmple.o(.text), (48 bytes).
     Removing depilogue.o(.text), (186 bytes).
 
-283 unused section(s) (total 14972 bytes) removed from the image.
+282 unused section(s) (total 14912 bytes) removed from the image.
 
 ==============================================================================
 
@@ -985,35 +978,35 @@ Image Symbol Table
     ../Src/main.c                            0x00000000   Number         0  main.o ABSOLUTE
     ../Src/stm32f1xx_hal_msp.c               0x00000000   Number         0  stm32f1xx_hal_msp.o ABSOLUTE
     ../Src/stm32f1xx_it.c                    0x00000000   Number         0  stm32f1xx_it.o ABSOLUTE
-    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
     ../clib/microlib/division.c              0x00000000   Number         0  uidiv.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
+    ../clib/microlib/division.c              0x00000000   Number         0  uldiv.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8b.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7a.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry9b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry5.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10a.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11a.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry11b.o ABSOLUTE
     ../clib/microlib/init/entry.s            0x00000000   Number         0  entry2.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry.o ABSOLUTE
-    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry10b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry7b.o ABSOLUTE
+    ../clib/microlib/init/entry.s            0x00000000   Number         0  entry8a.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llushr.o ABSOLUTE
-    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
     ../clib/microlib/longlong.c              0x00000000   Number         0  llshl.o ABSOLUTE
+    ../clib/microlib/longlong.c              0x00000000   Number         0  llsshr.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
+    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfb.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printfa.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf8.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf7.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf6.o ABSOLUTE
     ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf5.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf4.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf3.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf2.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf1.o ABSOLUTE
-    ../clib/microlib/printf/printf.c         0x00000000   Number         0  printf0.o ABSOLUTE
     ../clib/microlib/printf/stubs.s          0x00000000   Number         0  stubs.o ABSOLUTE
     ../clib/microlib/stdio/fputc.c           0x00000000   Number         0  fputc.o ABSOLUTE
     ../clib/microlib/stdio/semi.s            0x00000000   Number         0  semi.o ABSOLUTE
@@ -1021,13 +1014,14 @@ Image Symbol Table
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpyb.o ABSOLUTE
     ../clib/microlib/string/memcpy.c         0x00000000   Number         0  memcpya.o ABSOLUTE
     ../clib/microlib/string/strlen.c         0x00000000   Number         0  strlen.o ABSOLUTE
-    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusesemip.o ABSOLUTE
     ../clib/microlib/stubs.s                 0x00000000   Number         0  iusefp.o ABSOLUTE
+    ../clib/microlib/stubs.s                 0x00000000   Number         0  iusesemip.o ABSOLUTE
     ../fplib/microlib/fpadd.c                0x00000000   Number         0  dadd.o ABSOLUTE
     ../fplib/microlib/fpdiv.c                0x00000000   Number         0  ddiv.o ABSOLUTE
     ../fplib/microlib/fpepilogue.c           0x00000000   Number         0  depilogue.o ABSOLUTE
     ../fplib/microlib/fpfix.c                0x00000000   Number         0  dfixul.o ABSOLUTE
     ../fplib/microlib/fpmul.c                0x00000000   Number         0  dmul.o ABSOLUTE
+    ..\..\NRF24.c                            0x00000000   Number         0  nrf24.o ABSOLUTE
     ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal.c 0x00000000   Number         0  stm32f1xx_hal.o ABSOLUTE
     ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_cortex.c 0x00000000   Number         0  stm32f1xx_hal_cortex.o ABSOLUTE
     ..\Drivers\STM32F1xx_HAL_Driver\Src\stm32f1xx_hal_dma.c 0x00000000   Number         0  stm32f1xx_hal_dma.o ABSOLUTE
@@ -1046,6 +1040,7 @@ Image Symbol Table
     ..\Src\main.c                            0x00000000   Number         0  main.o ABSOLUTE
     ..\Src\stm32f1xx_hal_msp.c               0x00000000   Number         0  stm32f1xx_hal_msp.o ABSOLUTE
     ..\Src\stm32f1xx_it.c                    0x00000000   Number         0  stm32f1xx_it.o ABSOLUTE
+    ..\\..\\NRF24.c                          0x00000000   Number         0  nrf24.o ABSOLUTE
     ..\\Src\system_stm32f1xx.c               0x00000000   Number         0  system_stm32f1xx.o ABSOLUTE
     cdrcmple.s                               0x00000000   Number         0  cdrcmple.o ABSOLUTE
     dc.s                                     0x00000000   Number         0  dc.o ABSOLUTE
@@ -1106,29 +1101,29 @@ Image Symbol Table
     MX_SPI2_Init                             0x08001205   Thumb Code    56  main.o(i.MX_SPI2_Init)
     i.MemManage_Handler                      0x08001244   Section        0  stm32f1xx_it.o(i.MemManage_Handler)
     i.NMI_Handler                            0x08001246   Section        0  stm32f1xx_it.o(i.NMI_Handler)
-    i.NRF24_ACTIVATE_cmd                     0x08001248   Section        0  main.o(i.NRF24_ACTIVATE_cmd)
-    i.NRF24_DelayMicroSeconds                0x08001274   Section        0  main.o(i.NRF24_DelayMicroSeconds)
-    i.NRF24_available                        0x08001290   Section        0  main.o(i.NRF24_available)
-    i.NRF24_begin                            0x080012b8   Section        0  main.o(i.NRF24_begin)
-    i.NRF24_ce                               0x0800140c   Section        0  main.o(i.NRF24_ce)
-    i.NRF24_csn                              0x08001420   Section        0  main.o(i.NRF24_csn)
-    i.NRF24_disableDynamicPayloads           0x08001434   Section        0  main.o(i.NRF24_disableDynamicPayloads)
-    i.NRF24_initialize                       0x0800145c   Section        0  main.o(i.NRF24_initialize)
-    i.NRF24_openReadingPipe                  0x080014b4   Section        0  main.o(i.NRF24_openReadingPipe)
-    i.NRF24_powerDown                        0x080014fc   Section        0  main.o(i.NRF24_powerDown)
-    i.NRF24_read                             0x08001514   Section        0  main.o(i.NRF24_read)
-    i.NRF24_read_register                    0x08001558   Section        0  main.o(i.NRF24_read_register)
-    i.NRF24_read_registerN                   0x08001598   Section        0  main.o(i.NRF24_read_registerN)
-    i.NRF24_setAutoAck                       0x080015d4   Section        0  main.o(i.NRF24_setAutoAck)
-    i.NRF24_setCRCLength                     0x080015e2   Section        0  main.o(i.NRF24_setCRCLength)
-    i.NRF24_setChannel                       0x0800160a   Section        0  main.o(i.NRF24_setChannel)
-    i.NRF24_setDataRate                      0x08001618   Section        0  main.o(i.NRF24_setDataRate)
-    i.NRF24_setPALevel                       0x08001638   Section        0  main.o(i.NRF24_setPALevel)
-    i.NRF24_setPayloadSize                   0x08001674   Section        0  main.o(i.NRF24_setPayloadSize)
-    i.NRF24_setRetries                       0x08001684   Section        0  main.o(i.NRF24_setRetries)
-    i.NRF24_startListening                   0x08001690   Section        0  main.o(i.NRF24_startListening)
-    i.NRF24_write_register                   0x080016c4   Section        0  main.o(i.NRF24_write_register)
-    i.NRF24_write_registerN                  0x080016f4   Section        0  main.o(i.NRF24_write_registerN)
+    i.NRF24_ACTIVATE_cmd                     0x08001248   Section        0  nrf24.o(i.NRF24_ACTIVATE_cmd)
+    i.NRF24_DelayMicroSeconds                0x08001274   Section        0  nrf24.o(i.NRF24_DelayMicroSeconds)
+    i.NRF24_available                        0x08001290   Section        0  nrf24.o(i.NRF24_available)
+    i.NRF24_begin                            0x080012b8   Section        0  nrf24.o(i.NRF24_begin)
+    i.NRF24_ce                               0x0800140c   Section        0  nrf24.o(i.NRF24_ce)
+    i.NRF24_csn                              0x08001420   Section        0  nrf24.o(i.NRF24_csn)
+    i.NRF24_disableDynamicPayloads           0x08001434   Section        0  nrf24.o(i.NRF24_disableDynamicPayloads)
+    i.NRF24_initialize                       0x0800145c   Section        0  nrf24.o(i.NRF24_initialize)
+    i.NRF24_openReadingPipe                  0x080014b4   Section        0  nrf24.o(i.NRF24_openReadingPipe)
+    i.NRF24_powerDown                        0x080014fc   Section        0  nrf24.o(i.NRF24_powerDown)
+    i.NRF24_read                             0x08001514   Section        0  nrf24.o(i.NRF24_read)
+    i.NRF24_read_register                    0x08001558   Section        0  nrf24.o(i.NRF24_read_register)
+    i.NRF24_read_registerN                   0x08001598   Section        0  nrf24.o(i.NRF24_read_registerN)
+    i.NRF24_setAutoAck                       0x080015d4   Section        0  nrf24.o(i.NRF24_setAutoAck)
+    i.NRF24_setCRCLength                     0x080015e2   Section        0  nrf24.o(i.NRF24_setCRCLength)
+    i.NRF24_setChannel                       0x0800160a   Section        0  nrf24.o(i.NRF24_setChannel)
+    i.NRF24_setDataRate                      0x08001618   Section        0  nrf24.o(i.NRF24_setDataRate)
+    i.NRF24_setPALevel                       0x08001638   Section        0  nrf24.o(i.NRF24_setPALevel)
+    i.NRF24_setPayloadSize                   0x08001674   Section        0  nrf24.o(i.NRF24_setPayloadSize)
+    i.NRF24_setRetries                       0x08001684   Section        0  nrf24.o(i.NRF24_setRetries)
+    i.NRF24_startListening                   0x08001690   Section        0  nrf24.o(i.NRF24_startListening)
+    i.NRF24_write_register                   0x080016c4   Section        0  nrf24.o(i.NRF24_write_register)
+    i.NRF24_write_registerN                  0x080016f4   Section        0  nrf24.o(i.NRF24_write_registerN)
     i.NVIC_SetPriority                       0x08001730   Section        0  stm32f1xx_hal_cortex.o(i.NVIC_SetPriority)
     NVIC_SetPriority                         0x08001731   Thumb Code    32  stm32f1xx_hal_cortex.o(i.NVIC_SetPriority)
     i.PendSV_Handler                         0x08001750   Section        0  stm32f1xx_it.o(i.PendSV_Handler)
@@ -1158,27 +1153,28 @@ Image Symbol Table
     i._sputc                                 0x08001f4a   Section        0  printf8.o(i._sputc)
     _sputc                                   0x08001f4b   Thumb Code    10  printf8.o(i._sputc)
     i.main                                   0x08001f54   Section        0  main.o(i.main)
-    i.nrf24_DebugUART_Init                   0x0800208c   Section        0  main.o(i.nrf24_DebugUART_Init)
-    i.printRadioSettings                     0x080020a4   Section        0  main.o(i.printRadioSettings)
-    .constdata                               0x08002814   Section       13  main.o(.constdata)
-    RF24_RX_PW_PIPE                          0x08002814   Data           6  main.o(.constdata)
-    NRF24_ADDR_REGS                          0x0800281a   Data           7  main.o(.constdata)
-    .constdata                               0x08002821   Section       16  system_stm32f1xx.o(.constdata)
-    .constdata                               0x08002831   Section        8  system_stm32f1xx.o(.constdata)
-    .conststring                             0x0800283c   Section       65  main.o(.conststring)
-    .data                                    0x20000000   Section       32  main.o(.data)
-    payload_size                             0x20000000   Data           1  main.o(.data)
-    nrf24_CSN_PIN                            0x20000002   Data           2  main.o(.data)
-    nrf24_CE_PIN                             0x20000004   Data           2  main.o(.data)
-    nrf24_PORT                               0x20000008   Data           4  main.o(.data)
-    ack_payload_available                    0x2000000c   Data           4  main.o(.data)
-    dynamic_payloads_enabled                 0x20000010   Data           4  main.o(.data)
-    .data                                    0x20000020   Section       12  stm32f1xx_hal.o(.data)
-    .data                                    0x2000002c   Section        4  system_stm32f1xx.o(.data)
-    .bss                                     0x20000030   Section      354  main.o(.bss)
-    nrf24_hspi                               0x200000c8   Data          88  main.o(.bss)
-    nrf24_huart                              0x20000120   Data          64  main.o(.bss)
-    STACK                                    0x20000198   Section     1024  startup_stm32f103xb.o(STACK)
+    i.nrf24_DebugUART_Init                   0x0800208c   Section        0  nrf24.o(i.nrf24_DebugUART_Init)
+    i.printRadioSettings                     0x080020a4   Section        0  nrf24.o(i.printRadioSettings)
+    .constdata                               0x08002814   Section       16  system_stm32f1xx.o(.constdata)
+    .constdata                               0x08002824   Section        8  system_stm32f1xx.o(.constdata)
+    .constdata                               0x0800282c   Section       13  nrf24.o(.constdata)
+    RF24_RX_PW_PIPE                          0x0800282c   Data           6  nrf24.o(.constdata)
+    NRF24_ADDR_REGS                          0x08002832   Data           7  nrf24.o(.constdata)
+    .conststring                             0x0800283c   Section       65  nrf24.o(.conststring)
+    .data                                    0x20000000   Section        8  main.o(.data)
+    .data                                    0x20000008   Section       12  stm32f1xx_hal.o(.data)
+    .data                                    0x20000014   Section        4  system_stm32f1xx.o(.data)
+    .data                                    0x20000018   Section       16  nrf24.o(.data)
+    payload_size                             0x20000018   Data           1  nrf24.o(.data)
+    nrf24_CSN_PIN                            0x2000001a   Data           2  nrf24.o(.data)
+    nrf24_CE_PIN                             0x2000001c   Data           2  nrf24.o(.data)
+    nrf24_PORT                               0x20000020   Data           4  nrf24.o(.data)
+    dynamic_payloads_enabled                 0x20000024   Data           4  nrf24.o(.data)
+    .bss                                     0x20000028   Section      202  main.o(.bss)
+    .bss                                     0x200000f4   Section      152  nrf24.o(.bss)
+    nrf24_hspi                               0x200000f4   Data          88  nrf24.o(.bss)
+    nrf24_huart                              0x2000014c   Data          64  nrf24.o(.bss)
+    STACK                                    0x20000190   Section     1024  startup_stm32f103xb.o(STACK)
 
     Global Symbols
 
@@ -1331,29 +1327,29 @@ Image Symbol Table
     HardFault_Handler                        0x0800119b   Thumb Code     2  stm32f1xx_it.o(i.HardFault_Handler)
     MemManage_Handler                        0x08001245   Thumb Code     2  stm32f1xx_it.o(i.MemManage_Handler)
     NMI_Handler                              0x08001247   Thumb Code     2  stm32f1xx_it.o(i.NMI_Handler)
-    NRF24_ACTIVATE_cmd                       0x08001249   Thumb Code    40  main.o(i.NRF24_ACTIVATE_cmd)
-    NRF24_DelayMicroSeconds                  0x08001275   Thumb Code    18  main.o(i.NRF24_DelayMicroSeconds)
-    NRF24_available                          0x08001291   Thumb Code    40  main.o(i.NRF24_available)
-    NRF24_begin                              0x080012b9   Thumb Code   332  main.o(i.NRF24_begin)
-    NRF24_ce                                 0x0800140d   Thumb Code    16  main.o(i.NRF24_ce)
-    NRF24_csn                                0x08001421   Thumb Code    16  main.o(i.NRF24_csn)
-    NRF24_disableDynamicPayloads             0x08001435   Thumb Code    34  main.o(i.NRF24_disableDynamicPayloads)
-    NRF24_initialize                         0x0800145d   Thumb Code    86  main.o(i.NRF24_initialize)
-    NRF24_openReadingPipe                    0x080014b5   Thumb Code    64  main.o(i.NRF24_openReadingPipe)
-    NRF24_powerDown                          0x080014fd   Thumb Code    22  main.o(i.NRF24_powerDown)
-    NRF24_read                               0x08001515   Thumb Code    58  main.o(i.NRF24_read)
-    NRF24_read_register                      0x08001559   Thumb Code    58  main.o(i.NRF24_read_register)
-    NRF24_read_registerN                     0x08001599   Thumb Code    54  main.o(i.NRF24_read_registerN)
-    NRF24_setAutoAck                         0x080015d5   Thumb Code    14  main.o(i.NRF24_setAutoAck)
-    NRF24_setCRCLength                       0x080015e3   Thumb Code    40  main.o(i.NRF24_setCRCLength)
-    NRF24_setChannel                         0x0800160b   Thumb Code    14  main.o(i.NRF24_setChannel)
-    NRF24_setDataRate                        0x08001619   Thumb Code    32  main.o(i.NRF24_setDataRate)
-    NRF24_setPALevel                         0x08001639   Thumb Code    60  main.o(i.NRF24_setPALevel)
-    NRF24_setPayloadSize                     0x08001675   Thumb Code    12  main.o(i.NRF24_setPayloadSize)
-    NRF24_setRetries                         0x08001685   Thumb Code    12  main.o(i.NRF24_setRetries)
-    NRF24_startListening                     0x08001691   Thumb Code    50  main.o(i.NRF24_startListening)
-    NRF24_write_register                     0x080016c5   Thumb Code    44  main.o(i.NRF24_write_register)
-    NRF24_write_registerN                    0x080016f5   Thumb Code    54  main.o(i.NRF24_write_registerN)
+    NRF24_ACTIVATE_cmd                       0x08001249   Thumb Code    40  nrf24.o(i.NRF24_ACTIVATE_cmd)
+    NRF24_DelayMicroSeconds                  0x08001275   Thumb Code    18  nrf24.o(i.NRF24_DelayMicroSeconds)
+    NRF24_available                          0x08001291   Thumb Code    40  nrf24.o(i.NRF24_available)
+    NRF24_begin                              0x080012b9   Thumb Code   332  nrf24.o(i.NRF24_begin)
+    NRF24_ce                                 0x0800140d   Thumb Code    16  nrf24.o(i.NRF24_ce)
+    NRF24_csn                                0x08001421   Thumb Code    16  nrf24.o(i.NRF24_csn)
+    NRF24_disableDynamicPayloads             0x08001435   Thumb Code    34  nrf24.o(i.NRF24_disableDynamicPayloads)
+    NRF24_initialize                         0x0800145d   Thumb Code    86  nrf24.o(i.NRF24_initialize)
+    NRF24_openReadingPipe                    0x080014b5   Thumb Code    64  nrf24.o(i.NRF24_openReadingPipe)
+    NRF24_powerDown                          0x080014fd   Thumb Code    22  nrf24.o(i.NRF24_powerDown)
+    NRF24_read                               0x08001515   Thumb Code    58  nrf24.o(i.NRF24_read)
+    NRF24_read_register                      0x08001559   Thumb Code    58  nrf24.o(i.NRF24_read_register)
+    NRF24_read_registerN                     0x08001599   Thumb Code    54  nrf24.o(i.NRF24_read_registerN)
+    NRF24_setAutoAck                         0x080015d5   Thumb Code    14  nrf24.o(i.NRF24_setAutoAck)
+    NRF24_setCRCLength                       0x080015e3   Thumb Code    40  nrf24.o(i.NRF24_setCRCLength)
+    NRF24_setChannel                         0x0800160b   Thumb Code    14  nrf24.o(i.NRF24_setChannel)
+    NRF24_setDataRate                        0x08001619   Thumb Code    32  nrf24.o(i.NRF24_setDataRate)
+    NRF24_setPALevel                         0x08001639   Thumb Code    60  nrf24.o(i.NRF24_setPALevel)
+    NRF24_setPayloadSize                     0x08001675   Thumb Code    12  nrf24.o(i.NRF24_setPayloadSize)
+    NRF24_setRetries                         0x08001685   Thumb Code    12  nrf24.o(i.NRF24_setRetries)
+    NRF24_startListening                     0x08001691   Thumb Code    50  nrf24.o(i.NRF24_startListening)
+    NRF24_write_register                     0x080016c5   Thumb Code    44  nrf24.o(i.NRF24_write_register)
+    NRF24_write_registerN                    0x080016f5   Thumb Code    54  nrf24.o(i.NRF24_write_registerN)
     PendSV_Handler                           0x08001751   Thumb Code     2  stm32f1xx_it.o(i.PendSV_Handler)
     SVC_Handler                              0x08001809   Thumb Code     2  stm32f1xx_it.o(i.SVC_Handler)
     SysTick_Handler                          0x0800180b   Thumb Code    14  stm32f1xx_it.o(i.SysTick_Handler)
@@ -1367,21 +1363,21 @@ Image Symbol Table
     __scatterload_null                       0x08001ad7   Thumb Code     2  handlers.o(i.__scatterload_null)
     __scatterload_zeroinit                   0x08001ad9   Thumb Code    14  handlers.o(i.__scatterload_zeroinit)
     main                                     0x08001f55   Thumb Code   294  main.o(i.main)
-    nrf24_DebugUART_Init                     0x0800208d   Thumb Code    20  main.o(i.nrf24_DebugUART_Init)
-    printRadioSettings                       0x080020a5   Thumb Code  1854  main.o(i.printRadioSettings)
-    AHBPrescTable                            0x08002821   Data          16  system_stm32f1xx.o(.constdata)
-    APBPrescTable                            0x08002831   Data           8  system_stm32f1xx.o(.constdata)
+    nrf24_DebugUART_Init                     0x0800208d   Thumb Code    20  nrf24.o(i.nrf24_DebugUART_Init)
+    printRadioSettings                       0x080020a5   Thumb Code  1854  nrf24.o(i.printRadioSettings)
+    AHBPrescTable                            0x08002814   Data          16  system_stm32f1xx.o(.constdata)
+    APBPrescTable                            0x08002824   Data           8  system_stm32f1xx.o(.constdata)
     Region$$Table$$Base                      0x08002880   Number         0  anon$$obj.o(Region$$Table)
     Region$$Table$$Limit                     0x080028a0   Number         0  anon$$obj.o(Region$$Table)
-    RxpipeAddrs                              0x20000018   Data           8  main.o(.data)
-    uwTickFreq                               0x20000020   Data           1  stm32f1xx_hal.o(.data)
-    uwTickPrio                               0x20000024   Data           4  stm32f1xx_hal.o(.data)
-    uwTick                                   0x20000028   Data           4  stm32f1xx_hal.o(.data)
-    SystemCoreClock                          0x2000002c   Data           4  system_stm32f1xx.o(.data)
-    hspi2                                    0x20000030   Data          88  main.o(.bss)
-    huart1                                   0x20000088   Data          64  main.o(.bss)
-    myRxData                                 0x20000160   Data          50  main.o(.bss)
-    __initial_sp                             0x20000598   Data           0  startup_stm32f103xb.o(STACK)
+    RxpipeAddrs                              0x20000000   Data           8  main.o(.data)
+    uwTickFreq                               0x20000008   Data           1  stm32f1xx_hal.o(.data)
+    uwTickPrio                               0x2000000c   Data           4  stm32f1xx_hal.o(.data)
+    uwTick                                   0x20000010   Data           4  stm32f1xx_hal.o(.data)
+    SystemCoreClock                          0x20000014   Data           4  system_stm32f1xx.o(.data)
+    hspi2                                    0x20000028   Data          88  main.o(.bss)
+    huart1                                   0x20000080   Data          64  main.o(.bss)
+    myRxData                                 0x200000c0   Data          50  main.o(.bss)
+    __initial_sp                             0x20000590   Data           0  startup_stm32f103xb.o(STACK)
 
 
 
@@ -1391,135 +1387,138 @@ Memory Map of the image
 
   Image Entry point : 0x080000ed
 
-  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000028d0, Max: 0x00010000, ABSOLUTE)
+  Load Region LR_IROM1 (Base: 0x08000000, Size: 0x000028c8, Max: 0x00010000, ABSOLUTE)
 
-    Execution Region ER_IROM1 (Exec base: 0x08000000, Load base: 0x08000000, Size: 0x000028a0, Max: 0x00010000, ABSOLUTE)
+    Execution Region ER_IROM1 (Base: 0x08000000, Size: 0x000028a0, Max: 0x00010000, ABSOLUTE)
 
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x08000000   0x08000000   0x000000ec   Data   RO            3    RESET               startup_stm32f103xb.o
-    0x080000ec   0x080000ec   0x00000000   Code   RO         2126  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
-    0x080000ec   0x080000ec   0x00000004   Code   RO         2398    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
-    0x080000f0   0x080000f0   0x00000004   Code   RO         2401    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO         2403    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
-    0x080000f4   0x080000f4   0x00000000   Code   RO         2405    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
-    0x080000f4   0x080000f4   0x00000008   Code   RO         2406    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
-    0x080000fc   0x080000fc   0x00000000   Code   RO         2408    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
-    0x080000fc   0x080000fc   0x00000000   Code   RO         2410    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
-    0x080000fc   0x080000fc   0x00000004   Code   RO         2399    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
-    0x08000100   0x08000100   0x00000024   Code   RO            4    .text               startup_stm32f103xb.o
-    0x08000124   0x08000124   0x00000020   Code   RO         2129    .text               mc_w.l(llushr.o)
-    0x08000144   0x08000144   0x00000024   Code   RO         2131    .text               mc_w.l(memcpya.o)
-    0x08000168   0x08000168   0x0000000e   Code   RO         2133    .text               mc_w.l(strlen.o)
-    0x08000176   0x08000176   0x00000062   Code   RO         2417    .text               mc_w.l(uldiv.o)
-    0x080001d8   0x080001d8   0x00000024   Code   RO         2430    .text               mc_w.l(init.o)
-    0x080001fc   0x080001fc   0x0000001e   Code   RO         2433    .text               mc_w.l(llshl.o)
-    0x0800021a   0x0800021a   0x00000002   Code   RO          335    i.BusFault_Handler  stm32f1xx_it.o
-    0x0800021c   0x0800021c   0x00000002   Code   RO          336    i.DebugMon_Handler  stm32f1xx_it.o
-    0x0800021e   0x0800021e   0x00000002   PAD
-    0x08000220   0x08000220   0x000001bc   Code   RO         1503    i.HAL_GPIO_Init     stm32f1xx_hal_gpio.o
-    0x080003dc   0x080003dc   0x0000000a   Code   RO         1507    i.HAL_GPIO_WritePin  stm32f1xx_hal_gpio.o
-    0x080003e6   0x080003e6   0x00000002   PAD
-    0x080003e8   0x080003e8   0x0000000c   Code   RO         1214    i.HAL_GetTick       stm32f1xx_hal.o
-    0x080003f4   0x080003f4   0x00000010   Code   RO         1218    i.HAL_IncTick       stm32f1xx_hal.o
-    0x08000404   0x08000404   0x00000024   Code   RO         1219    i.HAL_Init          stm32f1xx_hal.o
-    0x08000428   0x08000428   0x00000040   Code   RO         1220    i.HAL_InitTick      stm32f1xx_hal.o
-    0x08000468   0x08000468   0x00000090   Code   RO          410    i.HAL_MspInit       stm32f1xx_hal_msp.o
-    0x080004f8   0x080004f8   0x00000040   Code   RO         1669    i.HAL_NVIC_SetPriority  stm32f1xx_hal_cortex.o
-    0x08000538   0x08000538   0x00000024   Code   RO         1670    i.HAL_NVIC_SetPriorityGrouping  stm32f1xx_hal_cortex.o
-    0x0800055c   0x0800055c   0x00000154   Code   RO         1363    i.HAL_RCC_ClockConfig  stm32f1xx_hal_rcc.o
-    0x080006b0   0x080006b0   0x0000000c   Code   RO         1368    i.HAL_RCC_GetHCLKFreq  stm32f1xx_hal_rcc.o
-    0x080006bc   0x080006bc   0x00000020   Code   RO         1370    i.HAL_RCC_GetPCLK1Freq  stm32f1xx_hal_rcc.o
-    0x080006dc   0x080006dc   0x00000020   Code   RO         1371    i.HAL_RCC_GetPCLK2Freq  stm32f1xx_hal_rcc.o
-    0x080006fc   0x080006fc   0x0000006c   Code   RO         1372    i.HAL_RCC_GetSysClockFreq  stm32f1xx_hal_rcc.o
-    0x08000768   0x08000768   0x00000304   Code   RO         1375    i.HAL_RCC_OscConfig  stm32f1xx_hal_rcc.o
-    0x08000a6c   0x08000a6c   0x00000082   Code   RO          817    i.HAL_SPI_Init      stm32f1xx_hal_spi_ex.o
-    0x08000aee   0x08000aee   0x00000002   PAD
-    0x08000af0   0x08000af0   0x0000005c   Code   RO          412    i.HAL_SPI_MspInit   stm32f1xx_hal_msp.o
-    0x08000b4c   0x08000b4c   0x00000150   Code   RO          508    i.HAL_SPI_Receive   stm32f1xx_hal_spi.o
-    0x08000c9c   0x08000c9c   0x00000168   Code   RO          513    i.HAL_SPI_Transmit  stm32f1xx_hal_spi.o
-    0x08000e04   0x08000e04   0x000001d8   Code   RO          514    i.HAL_SPI_TransmitReceive  stm32f1xx_hal_spi.o
-    0x08000fdc   0x08000fdc   0x00000018   Code   RO         1672    i.HAL_SYSTICK_CLKSourceConfig  stm32f1xx_hal_cortex.o
-    0x08000ff4   0x08000ff4   0x00000002   Code   RO         1673    i.HAL_SYSTICK_Callback  stm32f1xx_hal_cortex.o
-    0x08000ff6   0x08000ff6   0x00000028   Code   RO         1674    i.HAL_SYSTICK_Config  stm32f1xx_hal_cortex.o
-    0x0800101e   0x0800101e   0x00000008   Code   RO         1675    i.HAL_SYSTICK_IRQHandler  stm32f1xx_hal_cortex.o
-    0x08001026   0x08001026   0x00000062   Code   RO          902    i.HAL_UART_Init     stm32f1xx_hal_uart.o
-    0x08001088   0x08001088   0x00000058   Code   RO          414    i.HAL_UART_MspInit  stm32f1xx_hal_msp.o
-    0x080010e0   0x080010e0   0x000000ba   Code   RO          910    i.HAL_UART_Transmit  stm32f1xx_hal_uart.o
-    0x0800119a   0x0800119a   0x00000002   Code   RO          337    i.HardFault_Handler  stm32f1xx_it.o
-    0x0800119c   0x0800119c   0x00000068   Code   RO           13    i.MX_GPIO_Init      main.o
-    0x08001204   0x08001204   0x00000040   Code   RO           14    i.MX_SPI2_Init      main.o
-    0x08001244   0x08001244   0x00000002   Code   RO          338    i.MemManage_Handler  stm32f1xx_it.o
-    0x08001246   0x08001246   0x00000002   Code   RO          339    i.NMI_Handler       stm32f1xx_it.o
-    0x08001248   0x08001248   0x0000002c   Code   RO           15    i.NRF24_ACTIVATE_cmd  main.o
-    0x08001274   0x08001274   0x0000001c   Code   RO           16    i.NRF24_DelayMicroSeconds  main.o
-    0x08001290   0x08001290   0x00000028   Code   RO           17    i.NRF24_available   main.o
-    0x080012b8   0x080012b8   0x00000154   Code   RO           18    i.NRF24_begin       main.o
-    0x0800140c   0x0800140c   0x00000014   Code   RO           19    i.NRF24_ce          main.o
-    0x08001420   0x08001420   0x00000014   Code   RO           20    i.NRF24_csn         main.o
-    0x08001434   0x08001434   0x00000028   Code   RO           21    i.NRF24_disableDynamicPayloads  main.o
-    0x0800145c   0x0800145c   0x00000056   Code   RO           25    i.NRF24_initialize  main.o
-    0x080014b2   0x080014b2   0x00000002   PAD
-    0x080014b4   0x080014b4   0x00000048   Code   RO           26    i.NRF24_openReadingPipe  main.o
-    0x080014fc   0x080014fc   0x00000016   Code   RO           28    i.NRF24_powerDown   main.o
-    0x08001512   0x08001512   0x00000002   PAD
-    0x08001514   0x08001514   0x00000044   Code   RO           29    i.NRF24_read        main.o
-    0x08001558   0x08001558   0x00000040   Code   RO           30    i.NRF24_read_register  main.o
-    0x08001598   0x08001598   0x0000003c   Code   RO           31    i.NRF24_read_registerN  main.o
-    0x080015d4   0x080015d4   0x0000000e   Code   RO           32    i.NRF24_setAutoAck  main.o
-    0x080015e2   0x080015e2   0x00000028   Code   RO           33    i.NRF24_setCRCLength  main.o
-    0x0800160a   0x0800160a   0x0000000e   Code   RO           34    i.NRF24_setChannel  main.o
-    0x08001618   0x08001618   0x00000020   Code   RO           35    i.NRF24_setDataRate  main.o
-    0x08001638   0x08001638   0x0000003c   Code   RO           36    i.NRF24_setPALevel  main.o
-    0x08001674   0x08001674   0x00000010   Code   RO           37    i.NRF24_setPayloadSize  main.o
-    0x08001684   0x08001684   0x0000000c   Code   RO           38    i.NRF24_setRetries  main.o
-    0x08001690   0x08001690   0x00000032   Code   RO           39    i.NRF24_startListening  main.o
-    0x080016c2   0x080016c2   0x00000002   PAD
-    0x080016c4   0x080016c4   0x00000030   Code   RO           45    i.NRF24_write_register  main.o
-    0x080016f4   0x080016f4   0x0000003c   Code   RO           46    i.NRF24_write_registerN  main.o
-    0x08001730   0x08001730   0x00000020   Code   RO         1676    i.NVIC_SetPriority  stm32f1xx_hal_cortex.o
-    0x08001750   0x08001750   0x00000002   Code   RO          340    i.PendSV_Handler    stm32f1xx_it.o
-    0x08001752   0x08001752   0x00000020   Code   RO          529    i.SPI_CheckFlag_BSY  stm32f1xx_hal_spi.o
-    0x08001772   0x08001772   0x00000096   Code   RO          548    i.SPI_WaitFlagStateUntilTimeout  stm32f1xx_hal_spi.o
-    0x08001808   0x08001808   0x00000002   Code   RO          341    i.SVC_Handler       stm32f1xx_it.o
-    0x0800180a   0x0800180a   0x0000000e   Code   RO          342    i.SysTick_Handler   stm32f1xx_it.o
-    0x08001818   0x08001818   0x00000068   Code   RO           47    i.SystemClock_Config  main.o
-    0x08001880   0x08001880   0x00000048   Code   RO         2092    i.SystemInit        system_stm32f1xx.o
-    0x080018c8   0x080018c8   0x00000170   Code   RO          928    i.UART_SetConfig    stm32f1xx_hal_uart.o
-    0x08001a38   0x08001a38   0x00000064   Code   RO          930    i.UART_WaitOnFlagUntilTimeout  stm32f1xx_hal_uart.o
-    0x08001a9c   0x08001a9c   0x00000002   Code   RO          343    i.UsageFault_Handler  stm32f1xx_it.o
-    0x08001a9e   0x08001a9e   0x00000002   PAD
-    0x08001aa0   0x08001aa0   0x00000028   Code   RO         2346    i.__0sprintf$8      mc_w.l(printf8.o)
-    0x08001ac8   0x08001ac8   0x0000000e   Code   RO         2442    i.__scatterload_copy  mc_w.l(handlers.o)
-    0x08001ad6   0x08001ad6   0x00000002   Code   RO         2443    i.__scatterload_null  mc_w.l(handlers.o)
-    0x08001ad8   0x08001ad8   0x0000000e   Code   RO         2444    i.__scatterload_zeroinit  mc_w.l(handlers.o)
-    0x08001ae6   0x08001ae6   0x00000002   PAD
-    0x08001ae8   0x08001ae8   0x00000410   Code   RO         2351    i._printf_core      mc_w.l(printf8.o)
-    0x08001ef8   0x08001ef8   0x00000024   Code   RO         2352    i._printf_post_padding  mc_w.l(printf8.o)
-    0x08001f1c   0x08001f1c   0x0000002e   Code   RO         2353    i._printf_pre_padding  mc_w.l(printf8.o)
-    0x08001f4a   0x08001f4a   0x0000000a   Code   RO         2355    i._sputc            mc_w.l(printf8.o)
-    0x08001f54   0x08001f54   0x00000138   Code   RO           49    i.main              main.o
-    0x0800208c   0x0800208c   0x00000018   Code   RO           50    i.nrf24_DebugUART_Init  main.o
-    0x080020a4   0x080020a4   0x00000770   Code   RO           51    i.printRadioSettings  main.o
-    0x08002814   0x08002814   0x0000000d   Data   RO           53    .constdata          main.o
-    0x08002821   0x08002821   0x00000010   Data   RO         2093    .constdata          system_stm32f1xx.o
-    0x08002831   0x08002831   0x00000008   Data   RO         2094    .constdata          system_stm32f1xx.o
-    0x08002839   0x08002839   0x00000003   PAD
-    0x0800283c   0x0800283c   0x00000041   Data   RO           54    .conststring        main.o
-    0x0800287d   0x0800287d   0x00000003   PAD
-    0x08002880   0x08002880   0x00000020   Data   RO         2440    Region$$Table       anon$$obj.o
+    0x08000000   0x000000ec   Data   RO            3    RESET               startup_stm32f103xb.o
+    0x080000ec   0x00000000   Code   RO         2133  * .ARM.Collect$$$$00000000  mc_w.l(entry.o)
+    0x080000ec   0x00000004   Code   RO         2405    .ARM.Collect$$$$00000001  mc_w.l(entry2.o)
+    0x080000f0   0x00000004   Code   RO         2408    .ARM.Collect$$$$00000004  mc_w.l(entry5.o)
+    0x080000f4   0x00000000   Code   RO         2410    .ARM.Collect$$$$00000008  mc_w.l(entry7b.o)
+    0x080000f4   0x00000000   Code   RO         2412    .ARM.Collect$$$$0000000A  mc_w.l(entry8b.o)
+    0x080000f4   0x00000008   Code   RO         2413    .ARM.Collect$$$$0000000B  mc_w.l(entry9a.o)
+    0x080000fc   0x00000000   Code   RO         2415    .ARM.Collect$$$$0000000D  mc_w.l(entry10a.o)
+    0x080000fc   0x00000000   Code   RO         2417    .ARM.Collect$$$$0000000F  mc_w.l(entry11a.o)
+    0x080000fc   0x00000004   Code   RO         2406    .ARM.Collect$$$$00002712  mc_w.l(entry2.o)
+    0x08000100   0x00000024   Code   RO            4    .text               startup_stm32f103xb.o
+    0x08000124   0x00000020   Code   RO         2136    .text               mc_w.l(llushr.o)
+    0x08000144   0x00000024   Code   RO         2138    .text               mc_w.l(memcpya.o)
+    0x08000168   0x0000000e   Code   RO         2140    .text               mc_w.l(strlen.o)
+    0x08000176   0x00000062   Code   RO         2424    .text               mc_w.l(uldiv.o)
+    0x080001d8   0x00000024   Code   RO         2437    .text               mc_w.l(init.o)
+    0x080001fc   0x0000001e   Code   RO         2440    .text               mc_w.l(llshl.o)
+    0x0800021a   0x00000002   Code   RO          148    i.BusFault_Handler  stm32f1xx_it.o
+    0x0800021c   0x00000002   Code   RO          149    i.DebugMon_Handler  stm32f1xx_it.o
+    0x0800021e   0x00000002   PAD
+    0x08000220   0x000001bc   Code   RO         1316    i.HAL_GPIO_Init     stm32f1xx_hal_gpio.o
+    0x080003dc   0x0000000a   Code   RO         1320    i.HAL_GPIO_WritePin  stm32f1xx_hal_gpio.o
+    0x080003e6   0x00000002   PAD
+    0x080003e8   0x0000000c   Code   RO         1027    i.HAL_GetTick       stm32f1xx_hal.o
+    0x080003f4   0x00000010   Code   RO         1031    i.HAL_IncTick       stm32f1xx_hal.o
+    0x08000404   0x00000024   Code   RO         1032    i.HAL_Init          stm32f1xx_hal.o
+    0x08000428   0x00000040   Code   RO         1033    i.HAL_InitTick      stm32f1xx_hal.o
+    0x08000468   0x00000090   Code   RO          223    i.HAL_MspInit       stm32f1xx_hal_msp.o
+    0x080004f8   0x00000040   Code   RO         1482    i.HAL_NVIC_SetPriority  stm32f1xx_hal_cortex.o
+    0x08000538   0x00000024   Code   RO         1483    i.HAL_NVIC_SetPriorityGrouping  stm32f1xx_hal_cortex.o
+    0x0800055c   0x00000154   Code   RO         1176    i.HAL_RCC_ClockConfig  stm32f1xx_hal_rcc.o
+    0x080006b0   0x0000000c   Code   RO         1181    i.HAL_RCC_GetHCLKFreq  stm32f1xx_hal_rcc.o
+    0x080006bc   0x00000020   Code   RO         1183    i.HAL_RCC_GetPCLK1Freq  stm32f1xx_hal_rcc.o
+    0x080006dc   0x00000020   Code   RO         1184    i.HAL_RCC_GetPCLK2Freq  stm32f1xx_hal_rcc.o
+    0x080006fc   0x0000006c   Code   RO         1185    i.HAL_RCC_GetSysClockFreq  stm32f1xx_hal_rcc.o
+    0x08000768   0x00000304   Code   RO         1188    i.HAL_RCC_OscConfig  stm32f1xx_hal_rcc.o
+    0x08000a6c   0x00000082   Code   RO          630    i.HAL_SPI_Init      stm32f1xx_hal_spi_ex.o
+    0x08000aee   0x00000002   PAD
+    0x08000af0   0x0000005c   Code   RO          225    i.HAL_SPI_MspInit   stm32f1xx_hal_msp.o
+    0x08000b4c   0x00000150   Code   RO          321    i.HAL_SPI_Receive   stm32f1xx_hal_spi.o
+    0x08000c9c   0x00000168   Code   RO          326    i.HAL_SPI_Transmit  stm32f1xx_hal_spi.o
+    0x08000e04   0x000001d8   Code   RO          327    i.HAL_SPI_TransmitReceive  stm32f1xx_hal_spi.o
+    0x08000fdc   0x00000018   Code   RO         1485    i.HAL_SYSTICK_CLKSourceConfig  stm32f1xx_hal_cortex.o
+    0x08000ff4   0x00000002   Code   RO         1486    i.HAL_SYSTICK_Callback  stm32f1xx_hal_cortex.o
+    0x08000ff6   0x00000028   Code   RO         1487    i.HAL_SYSTICK_Config  stm32f1xx_hal_cortex.o
+    0x0800101e   0x00000008   Code   RO         1488    i.HAL_SYSTICK_IRQHandler  stm32f1xx_hal_cortex.o
+    0x08001026   0x00000062   Code   RO          715    i.HAL_UART_Init     stm32f1xx_hal_uart.o
+    0x08001088   0x00000058   Code   RO          227    i.HAL_UART_MspInit  stm32f1xx_hal_msp.o
+    0x080010e0   0x000000ba   Code   RO          723    i.HAL_UART_Transmit  stm32f1xx_hal_uart.o
+    0x0800119a   0x00000002   Code   RO          150    i.HardFault_Handler  stm32f1xx_it.o
+    0x0800119c   0x00000068   Code   RO           13    i.MX_GPIO_Init      main.o
+    0x08001204   0x00000040   Code   RO           14    i.MX_SPI2_Init      main.o
+    0x08001244   0x00000002   Code   RO          151    i.MemManage_Handler  stm32f1xx_it.o
+    0x08001246   0x00000002   Code   RO          152    i.NMI_Handler       stm32f1xx_it.o
+    0x08001248   0x0000002c   Code   RO         1942    i.NRF24_ACTIVATE_cmd  nrf24.o
+    0x08001274   0x0000001c   Code   RO         1943    i.NRF24_DelayMicroSeconds  nrf24.o
+    0x08001290   0x00000028   Code   RO         1944    i.NRF24_available   nrf24.o
+    0x080012b8   0x00000154   Code   RO         1945    i.NRF24_begin       nrf24.o
+    0x0800140c   0x00000014   Code   RO         1946    i.NRF24_ce          nrf24.o
+    0x08001420   0x00000014   Code   RO         1947    i.NRF24_csn         nrf24.o
+    0x08001434   0x00000028   Code   RO         1948    i.NRF24_disableDynamicPayloads  nrf24.o
+    0x0800145c   0x00000056   Code   RO         1949    i.NRF24_initialize  nrf24.o
+    0x080014b2   0x00000002   PAD
+    0x080014b4   0x00000048   Code   RO         1950    i.NRF24_openReadingPipe  nrf24.o
+    0x080014fc   0x00000016   Code   RO         1952    i.NRF24_powerDown   nrf24.o
+    0x08001512   0x00000002   PAD
+    0x08001514   0x00000044   Code   RO         1953    i.NRF24_read        nrf24.o
+    0x08001558   0x00000040   Code   RO         1954    i.NRF24_read_register  nrf24.o
+    0x08001598   0x0000003c   Code   RO         1955    i.NRF24_read_registerN  nrf24.o
+    0x080015d4   0x0000000e   Code   RO         1956    i.NRF24_setAutoAck  nrf24.o
+    0x080015e2   0x00000028   Code   RO         1957    i.NRF24_setCRCLength  nrf24.o
+    0x0800160a   0x0000000e   Code   RO         1958    i.NRF24_setChannel  nrf24.o
+    0x08001618   0x00000020   Code   RO         1959    i.NRF24_setDataRate  nrf24.o
+    0x08001638   0x0000003c   Code   RO         1960    i.NRF24_setPALevel  nrf24.o
+    0x08001674   0x00000010   Code   RO         1961    i.NRF24_setPayloadSize  nrf24.o
+    0x08001684   0x0000000c   Code   RO         1962    i.NRF24_setRetries  nrf24.o
+    0x08001690   0x00000032   Code   RO         1963    i.NRF24_startListening  nrf24.o
+    0x080016c2   0x00000002   PAD
+    0x080016c4   0x00000030   Code   RO         1968    i.NRF24_write_register  nrf24.o
+    0x080016f4   0x0000003c   Code   RO         1969    i.NRF24_write_registerN  nrf24.o
+    0x08001730   0x00000020   Code   RO         1489    i.NVIC_SetPriority  stm32f1xx_hal_cortex.o
+    0x08001750   0x00000002   Code   RO          153    i.PendSV_Handler    stm32f1xx_it.o
+    0x08001752   0x00000020   Code   RO          342    i.SPI_CheckFlag_BSY  stm32f1xx_hal_spi.o
+    0x08001772   0x00000096   Code   RO          361    i.SPI_WaitFlagStateUntilTimeout  stm32f1xx_hal_spi.o
+    0x08001808   0x00000002   Code   RO          154    i.SVC_Handler       stm32f1xx_it.o
+    0x0800180a   0x0000000e   Code   RO          155    i.SysTick_Handler   stm32f1xx_it.o
+    0x08001818   0x00000068   Code   RO           15    i.SystemClock_Config  main.o
+    0x08001880   0x00000048   Code   RO         1905    i.SystemInit        system_stm32f1xx.o
+    0x080018c8   0x00000170   Code   RO          741    i.UART_SetConfig    stm32f1xx_hal_uart.o
+    0x08001a38   0x00000064   Code   RO          743    i.UART_WaitOnFlagUntilTimeout  stm32f1xx_hal_uart.o
+    0x08001a9c   0x00000002   Code   RO          156    i.UsageFault_Handler  stm32f1xx_it.o
+    0x08001a9e   0x00000002   PAD
+    0x08001aa0   0x00000028   Code   RO         2353    i.__0sprintf$8      mc_w.l(printf8.o)
+    0x08001ac8   0x0000000e   Code   RO         2449    i.__scatterload_copy  mc_w.l(handlers.o)
+    0x08001ad6   0x00000002   Code   RO         2450    i.__scatterload_null  mc_w.l(handlers.o)
+    0x08001ad8   0x0000000e   Code   RO         2451    i.__scatterload_zeroinit  mc_w.l(handlers.o)
+    0x08001ae6   0x00000002   PAD
+    0x08001ae8   0x00000410   Code   RO         2358    i._printf_core      mc_w.l(printf8.o)
+    0x08001ef8   0x00000024   Code   RO         2359    i._printf_post_padding  mc_w.l(printf8.o)
+    0x08001f1c   0x0000002e   Code   RO         2360    i._printf_pre_padding  mc_w.l(printf8.o)
+    0x08001f4a   0x0000000a   Code   RO         2362    i._sputc            mc_w.l(printf8.o)
+    0x08001f54   0x00000138   Code   RO           17    i.main              main.o
+    0x0800208c   0x00000018   Code   RO         1970    i.nrf24_DebugUART_Init  nrf24.o
+    0x080020a4   0x00000770   Code   RO         1971    i.printRadioSettings  nrf24.o
+    0x08002814   0x00000010   Data   RO         1906    .constdata          system_stm32f1xx.o
+    0x08002824   0x00000008   Data   RO         1907    .constdata          system_stm32f1xx.o
+    0x0800282c   0x0000000d   Data   RO         1973    .constdata          nrf24.o
+    0x08002839   0x00000003   PAD
+    0x0800283c   0x00000041   Data   RO         1974    .conststring        nrf24.o
+    0x0800287d   0x00000003   PAD
+    0x08002880   0x00000020   Data   RO         2447    Region$$Table       anon$$obj.o
 
 
-    Execution Region RW_IRAM1 (Exec base: 0x20000000, Load base: 0x080028a0, Size: 0x00000598, Max: 0x00005000, ABSOLUTE)
+    Execution Region RW_IRAM1 (Base: 0x20000000, Size: 0x00000590, Max: 0x00005000, ABSOLUTE)
 
-    Exec Addr    Load Addr    Size         Type   Attr      Idx    E Section Name        Object
+    Base Addr    Size         Type   Attr      Idx    E Section Name        Object
 
-    0x20000000   0x080028a0   0x00000020   Data   RW           55    .data               main.o
-    0x20000020   0x080028c0   0x0000000c   Data   RW         1226    .data               stm32f1xx_hal.o
-    0x2000002c   0x080028cc   0x00000004   Data   RW         2095    .data               system_stm32f1xx.o
-    0x20000030        -       0x00000162   Zero   RW           52    .bss                main.o
-    0x20000192   0x080028d0   0x00000006   PAD
-    0x20000198        -       0x00000400   Zero   RW            1    STACK               startup_stm32f103xb.o
+    0x20000000   0x00000008   Data   RW           19    .data               main.o
+    0x20000008   0x0000000c   Data   RW         1039    .data               stm32f1xx_hal.o
+    0x20000014   0x00000004   Data   RW         1908    .data               system_stm32f1xx.o
+    0x20000018   0x00000010   Data   RW         1975    .data               nrf24.o
+    0x20000028   0x000000ca   Zero   RW           18    .bss                main.o
+    0x200000f2   0x00000002   PAD
+    0x200000f4   0x00000098   Zero   RW         1972    .bss                nrf24.o
+    0x2000018c   0x00000004   PAD
+    0x20000190   0x00000400   Zero   RW            1    STACK               startup_stm32f103xb.o
 
 
 ==============================================================================
@@ -1529,21 +1528,22 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   Object Name
 
-      3762        936         78         32        354     430848   main.o
-        36          8        236          0       1024        808   startup_stm32f103xb.o
-       128         24          0         12          0       3277   stm32f1xx_hal.o
-       206         14          0          0          0      26812   stm32f1xx_hal_cortex.o
-       454         36          0          0          0       2900   stm32f1xx_hal_gpio.o
-       324         36          0          0          0       2235   stm32f1xx_hal_msp.o
-      1296        104          0          0          0       5696   stm32f1xx_hal_rcc.o
-      1350          0          0          0          0       6103   stm32f1xx_hal_spi.o
-       130          0          0          0          0       1079   stm32f1xx_hal_spi_ex.o
-       752          4          0          0          0       3948   stm32f1xx_hal_uart.o
-        30          0          0          0          0       3894   stm32f1xx_it.o
-        72         16         24          4          0       1183   system_stm32f1xx.o
+       584         36          0          8        202     414213   main.o
+      3178        900         78         16        152      16618   nrf24.o
+        36          8        236          0       1024        792   startup_stm32f103xb.o
+       128         24          0         12          0       3181   stm32f1xx_hal.o
+       206         14          0          0          0      26684   stm32f1xx_hal_cortex.o
+       454         36          0          0          0       2852   stm32f1xx_hal_gpio.o
+       324         36          0          0          0       2171   stm32f1xx_hal_msp.o
+      1296        104          0          0          0       5584   stm32f1xx_hal_rcc.o
+      1350          0          0          0          0       6007   stm32f1xx_hal_spi.o
+       130          0          0          0          0       1047   stm32f1xx_hal_spi_ex.o
+       752          4          0          0          0       3868   stm32f1xx_hal_uart.o
+        30          0          0          0          0       3750   stm32f1xx_it.o
+        72         16         24          4          0       1135   system_stm32f1xx.o
 
     ----------------------------------------------------------------------
-      8554       1178        376         48       1384     488783   Object Totals
+      8554       1178        376         40       1384     487902   Object Totals
          0          0         32          0          0          0   (incl. Generated)
         14          0          6          0          6          0   (incl. Padding)
 
@@ -1588,15 +1588,15 @@ Image component sizes
 
       Code (inc. data)   RO Data    RW Data    ZI Data      Debug   
 
-     10024       1244        376         48       1384     485887   Grand Totals
-     10024       1244        376         48       1384     485887   ELF Image Totals
-     10024       1244        376         48          0          0   ROM Totals
+     10024       1244        376         40       1384     485006   Grand Totals
+     10024       1244        376         40       1384     485006   ELF Image Totals
+     10024       1244        376         40          0          0   ROM Totals
 
 ==============================================================================
 
     Total RO  Size (Code + RO Data)                10400 (  10.16kB)
-    Total RW  Size (RW Data + ZI Data)              1432 (   1.40kB)
-    Total ROM Size (Code + RO Data + RW Data)      10448 (  10.20kB)
+    Total RW  Size (RW Data + ZI Data)              1424 (   1.39kB)
+    Total ROM Size (Code + RO Data + RW Data)      10440 (  10.20kB)
 
 ==============================================================================
 

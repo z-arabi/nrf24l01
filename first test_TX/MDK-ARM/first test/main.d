@@ -25,5 +25,5 @@ first test\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_flash_ex.h
 first test\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 first test\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_spi.h
 first test\main.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-first test\main.o: ../Inc/NRF24.h
 first test\main.o: C:\Keil_v5\ARM\ARMCC\Bin\..\include\string.h
+first test\main.o: D:/Term6/micro/FP/FP4/master/NRF24.h

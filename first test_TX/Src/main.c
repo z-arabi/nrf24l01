@@ -39,11 +39,11 @@
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
 #include "stm32f1xx_hal.h"
-#include "NRF24.h"
 
 /* USER CODE BEGIN Includes */
 #include "string.h"
 #include "stdio.h"
+#include "NRF24.h"
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -53,29 +53,6 @@ UART_HandleTypeDef huart2;
 
 /* USER CODE BEGIN PV */
 /* Private variables ---------------------------------------------------------*/
-//*** NRF24L01 pins and handles ***//
-//CE and CSN pins
-static GPIO_TypeDef		*nrf24_PORT;
-static uint16_t				nrf24_CSN_PIN;
-static uint16_t				nrf24_CE_PIN;
-//SPI handle
-static SPI_HandleTypeDef nrf24_hspi;
-//Debugging UART handle
-static UART_HandleTypeDef nrf24_huart;
-
-#define MAX(x, y) (((x) > (y)) ? (x) : (y))
-#define MIN(x, y) (((x) < (y)) ? (x) : (y))
-#define ifpositive(x) (((x)>0) ? 1:0)
-
-//*** Library variables ***//
-static uint64_t pipe0_reading_address;
-static int ack_payload_available; /**< Whether there is an ack payload waiting */
-static uint8_t ack_payload_length; /**< Dynamic size of pending ack payload. */
-static uint8_t payload_size; /**< Fixed size of payloads */
-static int dynamic_payloads_enabled; /**< Whether dynamic payloads are enabled. */ 
-static int p_variant; /* False for RF24L01 and true for RF24L01P */
-static int wide_band; /* 2Mbs data rate in use? */
-
 
 uint64_t TxpipeAddrs = 0x11223344AA;
 char myTxData[32]="project with nrf";
@@ -134,8 +111,6 @@ int main(void)
 	NRF24_begin(GPIOA, CSN_Pin, CE_Pin, hspi1);
 	NRF24_initialize();
 
-	
-	//**** TRANSMIT - ACK ****//
 	NRF24_stopListening();
 	NRF24_openWritingPipe(1,TxpipeAddrs);
   /* USER CODE END 2 */
@@ -150,12 +125,7 @@ int main(void)
   /* USER CODE BEGIN 3 */
 	if(NRF24_write(myTxData, 32))
 		{
-			//NRF24_read(AckPayload, 32);
 			HAL_UART_Transmit(&huart2, (uint8_t *)"Transmitted Successfully\n", strlen("Transmitted Successfully\n"), 10);
-			
-//			char myDataack[80];
-//			sprintf(myDataack, "AckPayload:  %s \n", AckPayload);
-//			HAL_UART_Transmit(&huart2, (uint8_t *)myDataack, strlen(myDataack), 10);
 		}
 		
 		HAL_Delay(1000);
